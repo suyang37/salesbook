@@ -1,0 +1,1071 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns:o = 
+"urn:schemas-microsoft-com:office:office"><HEAD><TITLE>服务器架构</TITLE>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 11.00.9600.18057"><LINK rel=stylesheet 
+href="_template.css"></HEAD>
+<BODY>
+<DIV id=nsbanner>
+<DIV id=bannerrow1>
+<TABLE class=bannerparthead>
+  <TBODY>
+  <TR id=hdr>
+    <TD class=runninghead noWrap>New Documentation</TD></TR></TBODY></TABLE></DIV>
+<DIV id=titlerow>
+<H1 class=dtH1>服务器架构</H1></DIV></DIV>
+<DIV id=nstext><BR>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">一．服务器概述</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">服务器是指在局域网中，一种运行管理软件以控制对网络或网络资源（磁盘驱动器、打印机等）进行访问的计算机，并能够为在网络上的计算机提供资源使其犹如工作站那样地进行操作。从广义上讲，服务器是指网络中能对其它机器提供某些服务的计算机系统（如果一个PC对外提供ftp服务，也可以叫服务器）。从狭义上讲，服务器是专指某些高性能计算机，能通过网络，对外提供服务。相对于普通PC来说，稳定性、安全性、性能等方面都要求更高，因此在CPU、芯片组、内存、磁盘系统、网络等硬件和普通PC有所不同。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">服务器作为网络的节点，存储、处理网络上80％的数据、信息，因此也被称为网络的灵魂。做一个形象的比喻：服务器就像是邮局的交换机，而微机、笔记本、PDA、手机等固定或移动的网络终端，就如散落在家庭、各种办公场所、公共场所等处的电话机。日常的生活、工作中的电话交流、沟通，必须经过交换机，才能到达目标电话；同样如此，网络终端设备如家庭、企业中的微机上网，获取资讯，与外界沟通、娱乐等，也必须经过服务器，因此也可以说是服务器在“组织”和“领导”这些设备。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">服务器的构成与微机基本相似，有处理器、硬盘、内存、系统总线等，它们是针对具体的网络应用特别制定的，因而服务器与微机在处理能力、稳定性、可靠性、安全性、可扩展性、可管理性等方面存在差异很大。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">服务器的功能：</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">提供服务&nbsp;-&nbsp;IP&nbsp;地址</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">将一种资源共享给多个请求者&nbsp;-&nbsp;数据库</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">将一种设备共享给多个请求者&nbsp;-&nbsp;打印机</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">为其他系统开放网关&nbsp;-&nbsp;Web</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">提供处理能力&nbsp;-&nbsp;数字</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">存储内容&nbsp;-&nbsp;数据</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN><IMG 
+src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/ksohtml/wpsF669.tmp.png" 
+width=262 height=103></SPAN></P><SPAN>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">二．服务器的主要分类</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">服务器往往被用于运行企业或个人的关键业务，所以对其性能与可靠性方面的要求会远远高于桌面电脑。一般来说服务器的CPU、内存、网络、存储都会使用企业级部件。譬如相比桌面电脑常用的Intel酷睿系列CPU，服务器的CPU往往会采用性能更稳定强大的Intel至强（Xeon）系列或者IBM的Power系列。而内存也会采用带有诸如ECC效验等自恢复功能的高速企业级内存。为了满足特定的业务需求，不同种类的服务器又会在网络、存储、内存、显卡等方面进行强化。如电信行业采用的服务器往往会配备高速网卡以配合高速交换机；数据仓库应用中的服务器往往会配备高速光纤卡以便通过光纤接口（Fabric&nbsp;Channel）与存储网络配合。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">按照体系架构来区分，服务器主要分为两类：</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">非x86服务器：包括大型机、小型机和UNIX服务器，它们是使用RISC（精简指令集）或EPIC处理器，并且主要采用UNIX和其它专用操作系统的服务器，精简指令集处理器主要有IBM公司的POWER和PowerPC处理器，SUN与富士通公司合作研发的SPARC处理器、EPIC处理器主要是HP与Intel合作研发的安腾处理器等。这种服务器价格昂贵，体系封闭，但是稳定性好，性能强，主要用在金融、电信等大型企业的核心系统中。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">x86服务器：又称CISC（复杂指令集）架构服务器，即通常所讲的PC服务器，它是基于PC机体系结构，使用Intel或其它兼容x86指令集的处理器芯片和Windows操作系统的服务器，如IBM的System&nbsp;x系列服务器、HP的Proliant&nbsp;系列服务器等。&nbsp;价格便宜、兼容性好、稳定性差、不安全，主要用在中小企业和非关键业务中。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">CISC型CPU</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">CISC是英文“Complex&nbsp;Instruction&nbsp;Set&nbsp;Computer”的缩写，中文意思是“复杂指令集”，它是指英特尔生产的x86(intel&nbsp;CPU的一种命名规范)系列CPU及其兼容CPU(其他厂商如AMD,VIA等生产的CPU)，它基于PC机(个人电脑)体系结构。这种CPU一般都是&nbsp;32位的结构，可称为IA-32&nbsp;CPU。(IA:&nbsp;Intel&nbsp;Architecture，Intel架构)。CISC型CPU目前主要有intel的服务器CPU和AMD的服务器CPU两类。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">RISC型CPU</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">RISC&nbsp;是英文“Reduced&nbsp;Instruction&nbsp;Set&nbsp;Computing&nbsp;”</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">的缩写，中文意思是“精简指令集”。它是在CISC(Complex&nbsp;Instruction&nbsp;Set&nbsp;Computer)指令系统基础上发展起来的，相对于CISC型CPU&nbsp;，RISC型CPU不仅精简了指令系统，还采用了一种叫做“超标量和超流水线结构”，架构在同等频率下，采用RISC架构的CPU比CISC架构的CPU性能高很多，这是由CPU的技术特征决定的。RISC型CPU与Intel和AMD的CPU在软件和硬件上都不兼容。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">根据不同的业务需求与应用场景可以将服务器架构分为通用式服务器、机架式服务器、刀片服务器和企业服务器。下面将以IBM&nbsp;System&nbsp;x为例介绍这些架构的组成、特点与适用场景。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">直立式服务器(塔式服务器):&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">为可独立放置于桌面或地面的服务器,大都具有较多的扩充槽及硬盘空间.无需额外设备,插上电即可使用,因此使用最为广泛。外形上和立式桌面电脑很相似，不过其主板可扩展性更高。此种服务器一般使用入门级至强处理器如E5-2400,&nbsp;E3-1200，也可以使用低成本的酷睿、奔腾、赛扬系列。适用于中小型企业的文件与打印、电子邮件与协作、防火墙、分布式分支机构等业务。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">机架式服务器：</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">机架式服务器外形有别于桌面计算机，更像交换机，其使用工业标准尺寸可以安放在标准的19英寸机柜中。相比塔式服务器机架式服务器更节约空间，同时性能上也更强大。为可装上机柜之服务器,主要作用为节省空间,机台高度以1U为单位,1U约44mm,因空间较局限,扩充性较受限制,例如1U的服务器大都只有1到2个&nbsp;PCI扩充槽.此外,散热性能成为十分重要的因素,此时,各家厂商的功力就在此展现了。缺点是需要有机柜等设备,多为服务器用量较大的企业使用。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">此种服务器一般采用中端的至强系列处理器如E5-2600、E5-4600。适用于文件与打印、零售、网络基础架构、分布式应用程序、Web&nbsp;服务、Web&nbsp;2.0、虚拟化、光数据库、ERP&nbsp;应用程序、小型&nbsp;HPC&nbsp;安装、ERP&nbsp;部署和虚拟化。</SPAN></P><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">刀片服务器:</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">可算是比机架式服务器更节省空间的产品.主要结构为一大型主体机箱,内部可插上许多卡片,一张卡片即相当于一台服务器.当然,散热性在此非常重要,往往各&nbsp;家厂商都装上大型强力风扇来散热.此型服务器虽然空间较节省,但光是主体机箱部份可能就所费不赀,除大型企业外较少使用。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN><IMG 
+src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/ksohtml/wps995D.tmp.png" 
+width=122 height=163></SPAN><SPAN><IMG 
+src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/ksohtml/wps995E.tmp.png" 
+width=145 height=51></SPAN><SPAN><IMG 
+src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/ksohtml/wps995F.tmp.png" 
+width=159 height=94></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">企业服务器</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">企业服务器拥有更高的性能与可靠性，可以满足严苛业务需求。企业服务器一般需要安置在标准机架上工作，所以外形上类似于机架式服务器，另外也有高性能的刀片版本。此类服务器一般采用高端的至强系列处理器，例如Xeon&nbsp;E7系列。可以提供超大的内存容量、内存带宽和存储空间以优化数据库和虚拟环境。适用于虚拟化、数据库和企业级工作负载的平衡系统。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">以IBM&nbsp;System&nbsp;x3850&nbsp;X5&nbsp;and&nbsp;x3950&nbsp;X5为例。IBM&nbsp;System&nbsp;x3850&nbsp;X5基于最新一代&nbsp;IBM&reg;&nbsp;企业级&nbsp;X&nbsp;架构&reg;技术和</SPAN><SPAN><A 
+title="Go to site" 
+href="http://syndication.intel.com/DistributeModule.aspx?ppc_cid=WTM_00799067501&amp;re=masthead"><SPAN 
+class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">英特尔&reg;</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">处理器构建，可在节能、经济的设计中提供卓越的性能和无与伦比的可靠性。其最大的优点是能提供超凡的可扩展性和灵活性，帮助客户在正确的时间获得正确的功能。客户需要以比以往更快的速度将解决方案部署在数据中心内并产生回报。x3950&nbsp;X5&nbsp;工作负载优化系统是交钥匙式的解决方案，专为高性能数据库或虚拟化环境而配置。多个型号均配置实现了处理能力、内存、高性能存储、网络和软件的出色平衡，&nbsp;可以针对客户的数据库应用程序、虚拟化或&nbsp;SAP&nbsp;HANA&nbsp;环境自由选择。x3850&nbsp;X5&nbsp;服务器允许自由选择极其灵活的配置以及内存扩展功能。模块化的构建模块设计使客户既能够按照当前需求自定义系统，又能够应对不断变化的工作负载。可从双处理&nbsp;器系统扩展为拥有多达&nbsp;4&nbsp;个处理器。可以添加第二个系统，以便创建一个八处理器系统。起始配置为&nbsp;2&nbsp;个内存&nbsp;DIMM，可凭借双节点系统和&nbsp;2&nbsp;个&nbsp;MAX5&nbsp;内存扩展选件扩展至多达&nbsp;192&nbsp;个。根据环境变化重新分配资源。x3850&nbsp;X5&nbsp;能够满足客户的当前需求，同时提供一种简便、经济有效的升级途径，可在客户做好准备时更改环境。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;</SPAN><SPAN><IMG 
+src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/ksohtml/wps9960.tmp.png" 
+width=200 height=102></SPAN></P><SPAN>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">IBM&nbsp;System&nbsp;x3850&nbsp;X5</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">下一代服务器（PureSystems）</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">如今，IT&nbsp;领导者正在运用各种方法努力打造智慧的运算。许多领导者使用灵活的通用系统构建自己量身定制的系统，随后对这些系统进行优化，以满足其特定的业务环境需求。但为了成功实现优化，这些领导者需要耗费大量的时间和精力。此外，企业领导者还会利用高级硬件设备的简便性来打造智慧运算环境，并当这些方法奏效之后，他们会充分利用云计算的弹性。为此IBM推出了包含最佳实践和专家能力的PureSystems专家集成系统。&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">专家集成系统是指功能构建块。这些构建块是数千次部署、成熟最佳实践、创新思维和&nbsp;IT&nbsp;行业领先地位的完美结晶。专家集成系统分为两种类型：平台系统和基础架构系统。这两种专家集成系统均可节省您&nbsp;IT&nbsp;专业人员的时间和技能，使您的团队能够集中精力专注于创新和发展。这些集成式系统可向整个企业各个级别的不同角色提供专家能力，无论是业务领导者、还是数据中心经理概不例外。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">以IBM&nbsp;PureFlex&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">System为例。PureFlex&nbsp;System&nbsp;是具有专家集成技能的完整基础架构系统。这款&nbsp;IBM&nbsp;产品为您提供了一款集成式的计算系统，它将服务器、存储设备、网络、虚拟化和管理全面结合至单一结构中。PureFlex&nbsp;System&nbsp;性能提供的预置专家能力可帮助企业领导者简化管理，灵活部署使用统一管理的虚拟和硬件资源的集成模式。高效性和操作的灵活性有助于支持业务领导者以更低的成本快速部署&nbsp;IT&nbsp;服务。此外，PureFlex&nbsp;System&nbsp;建立在数十年的专家能力基础上。因此，它能够支持您深入集成并集中管理综合全面的开放式基础架构系统。这样，您有望显著降低管理和部署系统所需的技能成本和培训成本。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;</SPAN><SPAN><IMG 
+src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/ksohtml/wpsE455.tmp.png" 
+width=200 height=182></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">按照用途分类如下：</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">文件服务器：</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">文件服务器根据客户端的请求，对数据进行存储、检索及更新。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;</SPAN><SPAN><IMG 
+src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/ksohtml/wpsE456.tmp.png" 
+width=200 height=37></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">打印服务器：</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">有了打印服务器，就不必在每个客户端上安装打印机。并且，打印服务器支持各种打印机类型及打印队列。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;</SPAN><SPAN><IMG 
+src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/ksohtml/wpsE457.tmp.png" 
+width=200 height=98></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">数据库服务器：</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">数据库服务器的主要功能就是从磁盘存储、搜索、检索及更新数据。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;</SPAN><SPAN><IMG 
+src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/ksohtml/wpsE487.tmp.png" 
+width=200 height=64></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Email&nbsp;服务器</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Email&nbsp;服务器作为电子邮件的存储库及路由器，负责将电子邮件发送到目的地。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN><IMG 
+src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/ksohtml/wpsE488.tmp.png" 
+width=200 height=49></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Web&nbsp;服务器</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Web&nbsp;服务器用于寄存</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Web&nbsp;网页，并可运行服务器密集型&nbsp;Web&nbsp;应用。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;</SPAN><SPAN><IMG 
+src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/ksohtml/wpsE499.tmp.png" 
+width=200 height=44></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">基础服务器&nbsp;-&nbsp;DNS</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">DNS&nbsp;服务器负责处理客户端的名称解析请求。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN><IMG 
+src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/ksohtml/wpsE49A.tmp.png" 
+width=200 height=41></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">基础服务器&nbsp;–&nbsp;DHCP</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">DHCP&nbsp;服务器负责处理客户端的&nbsp;IP&nbsp;地址请求。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN><IMG 
+src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/ksohtml/wpsE49B.tmp.png" 
+width=200 height=42></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">虚拟化服务器</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">虚拟化平台能够使多操作系统在相同的物理硬件上同时运行。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">
+<P class=MsoNormal><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;</SPAN><SPAN><IMG 
+src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/ksohtml/wpsE49C.tmp.png" 
+width=200 height=117></SPAN><SPAN><IMG 
+src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/ksohtml/wpsE4AC.tmp.png" 
+width=173 height=200></SPAN></P><SPAN>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">三．System&nbsp;x的x86服务器</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">IBM的x86服务器主要是System&nbsp;X系列（以X开头的服务器均为X系列服务器的型号）。IBM&nbsp;System&nbsp;x系列服务器是基于Intel和AMD的x86架构处理器而开发的，主要面向中小型企业。从最初的PC服务器发展到现今的企业级x系列服务器架构，IBM&nbsp;System&nbsp;x经历了四代的演变，融合了IBM开发大型主机的40多年经验，能够向用户提供低成本、高可用性、高可靠性及可扩展的企业级应用服务器。同时IBM&nbsp;System&nbsp;x还向用户提供了一系列灵活的系统管理工具，使得系统的维护更为便捷和高效。IBM公司的服务器产品包括IBM&nbsp;System&nbsp;z,&nbsp;IBM&nbsp;System&nbsp;i,&nbsp;IBM&nbsp;System&nbsp;p,&nbsp;IBM&nbsp;System</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Storage和IBM&nbsp;System&nbsp;x。如图所示，IBM采用了在大型机和小型机（IBM&nbsp;System&nbsp;z，IBM&nbsp;System&nbsp;i和IBM&nbsp;System&nbsp;p）多年来的技术优势和深厚积累，比如群集扩展性能，高可靠性，高可用性和高可管理性，把一系列领先技术（光通道、远程联接诊断、超级并行交换开关、热插拔和热添加）系统地移植到System&nbsp;x服务器，从而使IBM&nbsp;System&nbsp;x系统地吸收了IBM四十多年来在高可靠企业计算系统方面的技术精华。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;</SPAN><SPAN><IMG 
+src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/ksohtml/wps1204.tmp.png" 
+width=200 height=126></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">IBM&nbsp;System&nbsp;x的名字起源于IBM的PC服务器，后来更名Netfinity，然后更名为eServer&nbsp;xSeries，现在是System&nbsp;x，但贯穿其中不变的是IBM企业级x系列服务器架构（Enterprise&nbsp;X-Architecture），为用户提供了以前IBM仅向大型机和其它高端系统用户提供的高级功能。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">如下表所示，IBM&nbsp;System&nbsp;x具有高可用性，高灵活性，开放性，高性能和高扩展性，简化的可管理性，虚拟化，强大的支持和可服务性。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal>
+<TABLE 
+style="BORDER-COLLAPSE: collapse; MARGIN-LEFT: -2.1pt; mso-padding-alt: 0.0000pt 0.0000pt 0.0000pt 0.0000pt" 
+align=center>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-TOP: windowtext 0.75pt outset; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 155.25pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: windowtext 0.75pt outset; PADDING-RIGHT: 0pt; mso-border-left-alt: 0.7500pt outset windowtext; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=207>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">IBM</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;System&nbsp;x特点</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: windowtext 0.75pt outset; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 270.75pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=361>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">实现</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 155.25pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: windowtext 0.75pt outset; PADDING-RIGHT: 0pt; mso-border-left-alt: 0.7500pt outset windowtext; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=207>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">高可用性</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 270.75pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=361>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">热插拔和冗余</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">预测故障分析（Predictive&nbsp;Failure&nbsp;Analysis:&nbsp;PFA）</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">高级内存</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;Chipkill</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;在线备用</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;内存镜像</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;热插拔和热添加内存</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">矢量校准冷却（Calibrated</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;Vector&nbsp;Cooling）</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 155.25pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: windowtext 0.75pt outset; PADDING-RIGHT: 0pt; mso-border-left-alt: 0.7500pt outset windowtext; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=207>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">高灵活性</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 270.75pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=361>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">平台选择</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">升级选择和选项</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">集成RAID</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">集成主板管理控制器（Baseboard&nbsp;&nbsp;Management&nbsp;Controllers:&nbsp;BMC）</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">eXtended&nbsp;I/O</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;领先的每瓦性能</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;长期稳定性和兼容性</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 155.25pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: windowtext 0.75pt outset; PADDING-RIGHT: 0pt; mso-border-left-alt: 0.7500pt outset windowtext; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=207>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">开放性</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 270.75pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=361>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;最新技术和标准</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Blade.org</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">合作伙伴纳入管理</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 155.25pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: windowtext 0.75pt outset; PADDING-RIGHT: 0pt; mso-border-left-alt: 0.7500pt outset windowtext; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=207>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">高性能和高扩展性</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 270.75pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=361>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">X3/X4&nbsp;架构</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">按需扩展（XpandOnDemand）</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 155.25pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: windowtext 0.75pt outset; PADDING-RIGHT: 0pt; mso-border-left-alt: 0.7500pt outset windowtext; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=207>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">简化的可管理性</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 270.75pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=361>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;BMC&nbsp;和RSA</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">IBM&nbsp;Director</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;多平台</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;多供应商</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;插件</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;企业集成</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Power&nbsp;Executive</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 155.25pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: windowtext 0.75pt outset; PADDING-RIGHT: 0pt; mso-border-left-alt: 0.7500pt outset windowtext; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=207>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">服务能力和支持</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 270.75pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=361>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">光通路诊断</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">组件的颜色编码</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">IBM&nbsp;服务和支持</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;多平台</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;多供应商</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;软件支持</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">电子服务代理商</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 155.25pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: windowtext 0.75pt outset; PADDING-RIGHT: 0pt; mso-border-left-alt: 0.7500pt outset windowtext; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=207>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">虚拟化</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 270.75pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=361>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">VMware销售和支持（IBM&nbsp;BladeCenter&nbsp;HS21&nbsp;XM&nbsp;刀片服务器和IBM&nbsp;System&nbsp;x3850&nbsp;M2服务器集成VMware&nbsp;ESX&nbsp;Server&nbsp;3i）</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;IBM&nbsp;Director虚拟化管理器</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD></TR></TBODY></TABLE></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">为了满足日益增长的Web&nbsp;2.0企业和数据中心的需求，2008年4月23日，IBM发布了互联网级服务器IBM&nbsp;System&nbsp;x&nbsp;iDataplex，提供量身定制的互联网级数据中心，在相同的电源和散热模块封装中容纳更多的处理器，更高效地利用空间。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">IBM&nbsp;System&nbsp;x&nbsp;iDataPlex是一款互联网级的解决方案，可帮助客户克服在电源、散热和物理空间方面的限制。iDataPlex解决方案采用创新的设计，将基于Intel处理器的处理融入到了节点、机架和数据中心内，可以提高电源和散热效率并获得所需的计算密度。iDataPlex解决方案围绕Flex&nbsp;Node技术构建，提供了定制的解决方案，以满足客户对计算能力、存储密度和联网的特殊业务需求。</SPAN></P><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">图1.2显示了IBM&nbsp;System&nbsp;x&nbsp;iDataplex外观图，其最突出的三大优点是节能，高密度计算和易用。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">1)节能：iDataPlex服务器配备了水冷装置来取代空气制冷设备，其适用于互联网级数据中心的灵活设计其能耗仅为40%，大幅减少散热成本；最小化甚至免除空调开支。（参见文献[2]）</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">2)高密度计算：iDataplex独特的机架设计专门经过优化，可以大大节省占地空间。创新的机架体系架构与标准1U机架相比使服务器密度提高了一倍以上，计算密度提高了5倍。（参见文献[2]）</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">3)易用：借助布满可轻松管理的组件的智能机架，iDataPlex解决方案可以整合信息提供单点参考，快速一瞥便可以知晓一切是否工作正常。iDataPlex服务器使用前端访问式布线易于维修和管理，您无需操作后面板便可以完成工作。其自定义设计能支持应用软件和工作负载的特殊需求，iDataPlex服务器的机箱在工厂中已经完成整体的配置，全面的测试和集成，然后整机出厂直接交付给用户。iDataplex是一种交钥匙式的解决方案，由于在工厂中已经完成了所有的集成工作，这样用户第一天就可以开始iDataplex。并且iDataplex采用包括Linux操作系统和集群管理技术xCat在内的工业标准化组件，从而减少了服务器的运行成本和有助于第三方厂商的集成。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN><IMG 
+src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/ksohtml/wps49D6.tmp.png" 
+width=133 height=200></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">System&nbsp;x</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">企业级X系列服务器架构</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">在2007年，IBM推出了第四代企业级x系列服务器架构（Enterprise&nbsp;X-Architecture）。第四代企业级x系列服务器架构提供无与伦比的解决方案，允许利用16、32甚至64个并行处理单元或“内核”。第四代EXA技术能够在可扩展性、可靠性、可用性和卓越的设计之间维护系统均衡，以便通过一个高能效的产品来满足数据库处理、企业应用主机托管及通过虚拟化整合服务器等要求。下表简单地回顾了IBM企业级x系列服务器架构的历史和各个阶段的主要特点。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal>
+<TABLE 
+style="BORDER-COLLAPSE: collapse; MARGIN-LEFT: -2.1pt; mso-padding-alt: 0.0000pt 0.0000pt 0.0000pt 0.0000pt" 
+align=center>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-TOP: windowtext 0.75pt outset; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 141.75pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: windowtext 0.75pt outset; PADDING-RIGHT: 0pt; mso-border-left-alt: 0.7500pt outset windowtext; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=189>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">企业级x系列服务器架构</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: windowtext 0.75pt outset; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 103.5pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=138>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">推出时间及机型</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: windowtext 0.75pt outset; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 180.75pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=241>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">主要特点</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 141.75pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: windowtext 0.75pt outset; PADDING-RIGHT: 0pt; mso-border-left-alt: 0.7500pt outset windowtext; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=189>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">第一代</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 103.5pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=138>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">2002年&nbsp;x440</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 180.75pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=241>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;内存镜像</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;32MB&nbsp;XceL4服务器加速缓存</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 141.75pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: windowtext 0.75pt outset; PADDING-RIGHT: 0pt; mso-border-left-alt: 0.7500pt outset windowtext; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=189>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">第二代</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 103.5pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=138>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">2003年&nbsp;x445</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 180.75pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=241>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;热插拔内存</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;聚集I/O提高40%</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;延时降低12%</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;64MB&nbsp;XceL4服务器加速缓存</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 141.75pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: windowtext 0.75pt outset; PADDING-RIGHT: 0pt; mso-border-left-alt: 0.7500pt outset windowtext; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=189>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">第三代</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 103.5pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=138>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">2005年&nbsp;x366</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 180.75pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=241>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;双总线架构</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;支持x86&nbsp;64位扩展(EM64T)</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;96MB&nbsp;XceL4服务器加速缓存</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;支持PCI-X&nbsp;2.0，所有槽66MHz</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 141.75pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: windowtext 0.75pt outset; PADDING-RIGHT: 0pt; mso-border-left-alt: 0.7500pt outset windowtext; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=189>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">第四代</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 103.5pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=138>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">2007年&nbsp;x3850&nbsp;M2</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 180.75pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=241>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;处理器独占的前端总线(FSB)</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;前端总线(FSB)频率从667&nbsp;MHz提高到1066&nbsp;MHz</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;内存带宽从333&nbsp;MHz提高到67&nbsp;MHz</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;内存容量提高４倍</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;支持４核</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;提供系统管理虚拟化模块组(embedded</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;hypervisor&nbsp;capability)&nbsp;:内嵌4GB&nbsp;VMWare&nbsp;ESX&nbsp;3i</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;U盘</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD></TR></TBODY></TABLE><!--EndFragment--></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P><!--EndFragment--></SPAN><!--EndFragment--></SPAN><!--EndFragment--></SPAN><!--EndFragment--></SPAN><!--EndFragment--></DIV>
+<DIV id=nstext>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">IBM企业级x系列服务器架构吸收了IBM&nbsp;40多年来在大型机和小型机方面的设计精华，通过简化管理、降低成本和提高可用性，降低了用户的总拥有成本。其主要包含以下技术：</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">XpandOnDemand&nbsp;按需扩展</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">PCI-X&nbsp;I/O和&nbsp;Active&nbsp;PCI-X&nbsp;I/O</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">高级内存子系统</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">XceL4服务器加速缓存</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">XpandOnDemand&nbsp;按需扩展</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">XpandOnDemand能够按照系统扩展，提供根据客户需求付费的可扩展性，从而保护了客户的现有投资。通过使用业内标准的硬件，XpandOnDemand可以轻松实现更高性能。比如只需要通过XpandOnDemand数据跳线连接4台4路x3950&nbsp;M2服务器（Intel&nbsp;6核至强处理器）就可升级为1台16路服务器（96个Intel处理器内核）。这些功能使用户可以根据需求变化来动态增加处理器和内存容量。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">下图显示了使用IBM&nbsp;System&nbsp;x3950&nbsp;M2来进行XpandOnDemand按需扩展，动态地增加处理器，内存和磁盘控制器。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN><IMG 
+src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/ksohtml/wpsA3BA.tmp.png" 
+width=331 height=146></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">PCI-X&nbsp;IO和Active&nbsp;PCI-X&nbsp;IO</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">当前PCI总线带宽不够支持新兴的10&nbsp;Gbps（或更高）I/O环境。IBM与其他公司于1998年提出并实现了PCI-X标准，主要用来解决日益增长的高速设备（高速以太网卡，光纤通道，Ultra3&nbsp;SCSC适配卡等）和多处理器集群间通信所带来的总线带宽瓶颈。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">IBM&nbsp;System&nbsp;x服务器支持最新的PCI-X标准，其成倍提高了PCI总线带宽，缓解了I/O瓶颈。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">IBM&nbsp;System&nbsp;x服务器支持Active&nbsp;PCI-X允许用户无需关闭服务器就可添加或更换Active&nbsp;PCI&nbsp;和Active&nbsp;PCI-X卡，支持如下特性：</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&#8226;热插拔：允许用户更换故障或即将发生故障的适配器，无需重启</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&#8226;热添加：提供简便升级，允许用户在服务器运行时添加新适配器（IBM是业界第一家提供这一特性的厂商）</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&#8226;故障切换：在主适配器故障时允许备份适配器负责运行所有正在处理的业务</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">高级内存系统</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">IBM&nbsp;System&nbsp;x使用了很多先进的内存技术，其主要包含以下四种技术：</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">1)Chipkill内存：Chipkill内存最初是由20年前的IBM大型机发展过来的，ChipKill最初是为美国航空航天局（NASA）的“探路者”探测器赴火星探险而研制。它是IBM公司为了解决服务器ECC（Error&nbsp;Checking&nbsp;and&nbsp;Correcting）内存技术的不足而开发的。ECC将信息进行8比特编码时，只能改正1比特的错误和检查到（但不改正）2比特的错误。而Chipkill内存提供对每个DRAM内存纠正2比特错误的能力，进一步提高了服务器的可靠性。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">2)Memory&nbsp;ProteXion：Memory&nbsp;ProteXion最初开发用于IBM大型机并且多年来用于IBM&nbsp;System&nbsp;z和IBM&nbsp;System&nbsp;i服务器，用来帮助保护不出现由于硬内存错误导致的突发故障。它的工作方式是：如果系统检测到DIMM内存上有坏扇区，它将把数据写到备用扇区以实现这一目的。Memory&nbsp;ProteXion在DIMM级别工作，可纠正多位元DRAM错误并进一步防止数据丢失。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">3)内存镜像：在该项技术中，内存的管理方法与RAID配置中磁盘镜像非常类似。在这种情况下，主内存条上数据的精确映射被镜像到备用内存条。结果是，如果一根内存条出现故障，镜像的内存条将变为主内存条。在更换了故障内存条之后，主内存条内存中的数据将镜像复制到新内存条。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">4)热添加/热插拔内存：在系统不关机的情况下热添加/热插拔内存，从而动态添加主存，增强性能。内存镜像和热插拔支持允许同步读写独立的和冗余的内存卡，从而提供无与伦比的高级数据保护。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Xcel4</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">XceL4服务器加速缓存（Server&nbsp;Accelerator&nbsp;Cache）是集成在SMP扩展模块中的DDR（双倍速率）内存，可实现Intel处理器、主存储器和I/O设备间的高速性能，通过降低处理器需要访问主内存的次数来获取更多的数据，可以将总体系统性能提高20％。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">IBM&nbsp;System&nbsp;x每个SMP扩展模块都包括一个32MB（或更高）XceL4缓存。当客户从4路向8路扩展时，无论他们选择向4路中添加另一个SMP扩展模块还是将两个4路系统连接在一起，均能从添加另一个32MB&nbsp;XceL4缓存中受益。同样，在16路配置中，无论配置方式是2x8路还是4x4路，客户均能从128MB&nbsp;XceL4缓存中受益。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">易于管理的硬件</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">基于硬件和软件的系统管理功能是IBM&nbsp;System&nbsp;x服务器和刀片服务器系列产品的一个重要的亮点。这些功能使IBM服务器更容易管理，并提供全面的警报和基于任务的管理。不管是入门级配置还是大型高端企业环境，良好的服务器系统管理都是全面减少总成本拥有的关键，因此IBM&nbsp;System&nbsp;x从最初的设计开始就非常重视提供良好的系统管理软件，从而减少用户的总拥有成本。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">IBM随System&nbsp;x服务器和刀片服务器一起提供了一组完备的系统管理工具，以帮助客户解决在服务器的使用期内所遇到的现实问题，在成本节约和提高可用性方面实现量化的效益。这样，客户可以相应地从投资中获得更多的回报，并可以让珍贵的人力资源物尽其用。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">根据所管理的元素和侧重点的不同，客户的系统管理任务在逻辑上可以分为以下三层：</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">1)具体设备的单点管理；</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">2)跨设备的多系统平台管理；</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">3)异构可扩展的企业级运营高级管理。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">上层的系统管理任务往往依赖于下层的系统管理任务的支持。例如第二层的多系统平台管理&nbsp;“IBM&nbsp;Director”依赖于第一层的单点管理“动态系统分析（DSA）”和硬件BMC；第三层的企业级运营高级管理“IBM&nbsp;Tivoli基础架构管理”依赖于第二层的平台管理“IBM&nbsp;Director向上集成模块（Upward&nbsp;Integration&nbsp;Modules:&nbsp;UIMs）”。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">如图1.4所示，单点管理处于系统管理的最底层，主要有：(1)基于硬件的系统管理，如MM/AMM，BMC和RSA-II卡；(2)基于软件的系统管理，如动态系统分析（Dynamic&nbsp;System&nbsp;Analysis）和易捷升级系统包（UpdateXpress&nbsp;System&nbsp;Pack）。这一层主要关注单一硬件设备类型的点对点管理。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">平台管理处于系统管理的中间层，主要有IBM&nbsp;Director软件。这一层主要关注中小型企业的跨设备综合管理。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">高级管理处于系统管理的最上层，主要有IBM&nbsp;Tivoli软件（包括IBM&nbsp;Director的向上集成）和第三方公司的系统管理软件（比如HP&nbsp;Openview和CA&nbsp;Unicenter）。</SPAN></P><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">
+<P class=MsoNormal><SPAN><IMG 
+src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/ksohtml/wpsEF89.tmp.png" 
+width=413 height=312></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Ex5</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">在2012年3月3日，IBM公司在北京举行了其面向下一代X86服务器的eX5体系架构发布会，并现场展示了即将在月底英特尔Nehalem-EX发布之后推向市场的三款eX5服务器新品：4路服务器System&nbsp;x3850&nbsp;X5、双路服务器System&nbsp;x3690&nbsp;X5和刀片服务器BladeCenter&nbsp;HX5。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">eX5的创新优势：</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">MAX5性能优化中心，可以实现最大3TB的内存扩展空间；</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">高性能的eXFlash极速存储套件，使用主流的SSD固态硬盘技术；</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">虚拟化IO&nbsp;可以实现带宽的虚拟化，根据应用实现带宽的分配；</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">eX5五大创新之四：FlexNode灵动分区带来的模块化扩展，全面供货，可以实现多台设备的堆叠；</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">eX5五大创新之五：IBM&nbsp;OnForeverTM自动失效切换带来高可靠性，可以实现堆叠组中任何一台设备DOWN机，将程序自动切换到现有正常机器运行。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">四.&nbsp;SMP、NUMA、MPP体系结构</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">从体系结构来看，目前广泛应用于关键业务领域的商用服务器大体可以分为三类，即对称多处理器结构(SMP：Symmetric&nbsp;Multi-Processor)，非一致存储访问结构(NUMA：Non-Uniform&nbsp;Memory&nbsp;Access)&nbsp;以及海量并行处理结构(MPP：Massive&nbsp;Parallel&nbsp;Processing)。&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;SMP结构是指服务器中多个CPU对称工作，无主次或从属关系。各CPU共享相同的物理内存，每个CPU访问内存中的任何地址所需时间是相同的，因此SMP也被称为一致存储器访问结构。对SMP服务器进行扩展的方式包括：增加内存、使用更快的CPU、增加CPU、扩充I/O、更多的外部设备&nbsp;(通常是磁盘存储)。SMP服务器的主要特征是共享，系统中所有资源（CPU、内存、I/O等）都是共享的。也正是由于这种特征，导致了SMP服务器的主要问题，那就是它的扩展能力非常有限：每一个共享的环节都可能造成SMP服务器扩展时的瓶颈；对SMP而言，最受限制的是内存，每个CPU必须通过相同的内存总线访问相同的内存资源；随着CPU数量的增加，内存访问冲突将迅速增加，造成CPU资源的浪费，CPU性能的有效性大大降低。&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;由于SMP在扩展能力上的限制，人们开始探究如何进行有效地扩展从而构建大型系统的技术，NUMA就是这种努力下的结果之一。利用NUMA技术，可以把几十个CPU（甚至上百个CPU）组合在一个服务器内。&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN><IMG 
+src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/ksohtml/wpsEF9A.tmp.png" 
+width=342 height=214></SPAN></P><SPAN>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">NUMA服务器的基本特征是：具有多个CPU模块（或称为Building&nbsp;Block、节点）；每个CPU模块由多个CPU（如4个）组成，并且具有独立的本地内存、I/O槽口等；节点之间通过互连模块进行连接和信息交互；每个&nbsp;CPU可以访问整个系统的内存，显然，访问本地内存的速度将远远高于访问远地内存（系统内其他节点的内存）的速度，这也是非一致存储访问NUMA的由来。由于这个特点，为了更好地发挥系统性能，开发应用程序时需要尽量减少不同CPU模块之间的信息交互。&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">利用NUMA技术，可以较好地解决原来SMP系统的扩展问题，在一个物理服务器内可以支持上百个CPU。&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">NUMA技术的主要问题是，由于访问远地内存的延时远远超过本地内存，因此当CPU数量增加时，系统性能无法线性增加。&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">和NUMA不同，MPP提供了另外一种进行系统扩展的方式，它由多个SMP服务器通过一定的节点互联网络进行连接，协同工作，完成相同的任务，从用户的角度来看是一个服务器系统。其基本特征如下：由多个SMP服务器（每个SMP服务器称节点）通过节点互连网络连接而成，每个节点只访问自己的本地资源（内存、存储等），是一种完全无共享结构；扩展能力最好，理论上其扩展无限制，目前的技术可实现512个节点互连。&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">在MPP系统中，每个SMP节点也可以运行自己的操作系统、数据库等，但和NUMA不同的是，它不存在异地内存访问的问题。换言之，每个节点内的CPU不能访问另一个节点的内存。节点之间的信息交互是通过节点互联网络实现的，这个过程一般称为数据重分配(Data&nbsp;Redistribution)。&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">MPP服务器的主要问题是：需要一种复杂的机制来调度和平衡各个节点的负载和并行处理过程。目前一些基于MPP技术的服务器往往通过系统级软件（如数据库）来屏蔽这种复杂性。基于此类数据库来开发应用时，不管后台服务器由多少个节点组成，开发人员所面对的都是同一个数据库系统，而不需要考虑如何调度其中某几个节点的负载。&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NUMA与MPP的区别&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">通过分析NUMA和MPP服务器的内部架构和工作原理不难发现其差异所在。&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">节点互联机制不同。NUMA的节点互联机制是在同一个物理服务器内部实现，当某个CPU需要进行远地内存访问时，它必须等待，这也是NUMA服务器无法实现CPU增加时性能线性扩展的主要原因。而MPP的节点互联机制是在不同的SMP服务器外部通过I/O实现的，每个节点只访问本地内存和存储，节点之间的信息交互与节点本身的处理是并行进行的。因此，MPP在增加节点时性能基本上可以实现线性扩展。&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">内存访问机制不同。在NUMA服务器内部，任何一个CPU可以访问整个系统的内存，但远地访问的性能远远低于本地内存访问，因此在开发应用程序时应该尽量避免远地内存访问。在MPP服务器中，每个节点只访问本地内存，不存在远地内存访问的问题。&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN><IMG 
+src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/ksohtml/wps2099.tmp.png" 
+width=182 height=200></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">哪种服务器技术更适合于数据仓库环境？&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">回答这个问题，需要从数据仓库环境本身的负载特征入手。典型的数据仓库环境具有大量复杂的数据处理和综合分析，要求系统具有很高的I/O处理能力，并且存储系统需要提供足够的I/O带宽与之匹配。&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">从NUMA架构来看，它可以在一个物理服务器内集成许多CPU，使系统具有较高的事务处理能力，由于远地内存访问时延远长于本地内存访问，因此需要尽量减少不同CPU模块之间的数据交互。显然，NUMA架构当用于数据仓库环境时，由于大量复杂的数据处理必然导致大量的数据交互，将使CPU的利用率大大降低。&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;相对而言，MPP服务器架构的并行处理能力更优越，更适合于复杂的数据综合分析与处理环境。当然，它需要借助于支持MPP技术的关系数据库系统来屏蔽节点之间负载平衡与调度的复杂性。另外，这种并行处理能力也与节点互联网络有很大的关系。显然，适应于数据仓库环境的MPP服务器，其节点互联网络的I/O性能应该非常突出，才能充分发挥整个系统的性能。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">五</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">服务器衡量标准</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">深入解读TPC体系</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">TPC-C基准程序用来衡量整个IT系统的性能，而不是评价服务器或某种硬件系统的标准，其中性能由tpmC衡量。TPC-H所报告的性能计量单位被称为“TPC-H复合式每小时查询性能单位（QphH）”，反映出了系统处理查询的多方面能力。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">TPC体系是影响最大的评测基准之一。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">TPC(TransactionProcessing&nbsp;Performance&nbsp;Council，事务处理性能委员会)是由数十家会员公司创建的非赢利组织，总部设在美国。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">TPC不给出基准程序的代码，而只给出基准程序的标准规范。任何厂家或其他测试者都可以根据规范，最优地构造出自己的测试系统(测</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">试平台和测试程序)。为保证测试结果的完整性，被测试者(通常是厂家)必须提交给TPC一套完整的报告，包括被测系统的详细配置、分类价格和包含5年维护&nbsp;费用在内的总价格。该报告必须由TPC授权的审核员核实(TPC本身并不做审计)。TPC在全球只有不到10名审核员，而且全部在美国。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">TPC推出过11套基准程序，分别是正在使用的TPC-App、TPC-&nbsp;H、TPC-C、TPC-W，过时的TPC-A、TPC-B、TPC-D和TPC-R，以及因为不被业界接受而放弃的TPC-S（Server专门测试基&nbsp;准程序）、TPC-E（大型企业信息服务测试基准程序）和TPC-Client/Server。目前最为“流行”的TPC-C是联机事务处理(OLTP)&nbsp;的基准程序，于1992年7月完成，后被业界逐渐接受。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">TPCC&nbsp;标准</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">作为一家非盈利性机构，事务处理性能委员会（TPC）负责定义诸如TPC-C、TPC-H和TPC-W&nbsp;基准测试之类的事务处理与数据库性能基准测试，并依据这些基准测试项目发布客观性能数据。TPC基准测试采用极为严格的运行环境，并且必须在独立审计机构&nbsp;监督下进行。委员会成员包括大多数主要数据库产品厂商以及服务器硬件系统供应商。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">相关企业参与TPC基准测试以期在规定运行环境中获得客观性能验证，并通过应用测试过程中所使用的技术开发出更加强健且更具伸缩性的软件产品及硬件设备。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">TPC-C是一种旨在衡量联机事务处理（OLTP）系统性能与可伸缩性的行业标准基准测试项目。这种基准测试项目将对包括查询、更新及队列式小批量事务在内的广泛数据库功能进行测试。许多IT专业人员将TPC-C视为衡量“真实”OLTP系统性能的有效指示器。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">TPC-&nbsp;C基准测试针对一种模拟订单录入与销售环境测量每分钟商业事务（tpmC）吞吐量。特别值得一提的是，它将专门测量系统在同时执行其它四种事务类型（如支</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">付、订单状态更新、交付及证券级变更）时每分钟所生成的新增订单事务数量。独立审计机构将负责对基准测试结果进行公证，同时，TPC将出据一份全面彻底的&nbsp;测试报告。这份测试报告可以从TPC</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Web站点(http://www.tpc.org)上获得。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">TPC-E——OLTP联机事务处理测试新模型</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">20年前，美国的TPC(事务处理性能委员会，Transaction&nbsp;Processing&nbsp;Performance&nbsp;Council)成立之时，或许并没有想到其TPC系列测试标准会如此受业界关注。作为国际上权威的服务器性能测试组织。目前在国际上几乎所有IT界的知&nbsp;名厂商(如IBM、HP、SUN、英特尔等)都是TPC的会员。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">OLTP测试模型一直是TPC组织的重点测试标准，TPC-C的前身TPC-A就是TPC组织发布的第一个测试标准。由于TPC-C逼真地&nbsp;模拟了OLTP应用，在发布后逐渐得到广大用户的认可，使用tpmC作为其计算机系统性能评价体系基础的用户数量逐年上升。不过，随着信息产业的不断发&nbsp;展，TPC-C的一些问题也慢慢暴露出来。首先，随着B2B、B2C等新型应用逐渐兴起，TPC-C现有的仓库管理系统测试模型已经距离目前的OLTP用&nbsp;户应用模式越来越远，5种作业需求也不足以覆盖用户现有的典型操作;其次，众多的测试设备投入使得TPC-C测试给厂商带来了较大的压力，这并不是TPC&nbsp;组织愿意看到的，因此TPC组织于2007年3月推出了全新的OLTP测试标准——TPC-E，意在用这个测试标准取代TPC-C测试，从而对上述问题起&nbsp;到解决作用。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">TPC-E在测试模型上进行了巨大的革新与改进。TPC-E是以美国纽约证券交易所为模型，该测试模拟了一系列后端处理数据以及证券公司前端客户在股票交易市场的典型行为——账户查询、在线交易和市场调研。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">与TPC-C测试模型相比，TPC-E更加强调模型的高仿真性，其模型微缩模拟了全球最大电子股票交易市场——美国纳斯达克股市的日常业务&nbsp;流程，模型架构完成了从C/S架构到B/S架构的过渡，是典型的互联网时代OLTP性能测试基准。同时，数据类型更加丰富，由3类扩展为10类，模拟的交&nbsp;易条件更复杂。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">TPC-H关注查询能力</SPAN></P><!--EndFragment--></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">TPC-H是一种决策支持基准。它包含一整套面向商业的特殊查询和并发数据修改内容。该基准中选择的查询和数据库中的数据都具有广泛的全行业关联性。这种测试基准所描述的决策支持系统可检查大量的数据，所执行的查询也具有很高的复杂度。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">TPC-H所报告的性能计量单位被称为“TPC-H复合式每小时查询性能单&nbsp;位”（TPC-H&nbsp;Composite&nbsp;Query-per-Hour&nbsp;Performance&nbsp;Metric&nbsp;-</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">QphH@Size），反映的是系统处理查询的多方面能力，包括查询执行时选定的数据库大小、单个流提交查询时的查询处理能力，以及多个并发用户提交查询&nbsp;时的查询吞吐量。TPC-H的价格/性能比计量单位的表达方式为</SPAN><SPAN><A 
+href="mailto:$/QphH@Size"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">$/QphH@Size</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">应用性能参考SPEC</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">SPEC是标准性能评估公司（Standard&nbsp;Performance&nbsp;Evaluation&nbsp;Corporation）的简称。SPEC是由计算机厂商、系统集成商、大学、研究机构、咨询等多家公司组成的非营利性组织，这个组织的目标是建立、维护&nbsp;一套用于评估计算机系统的标准。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">与TPC体系注重在线处理能力和数据库查询能力不同，SPEC体系中最广为人知的两个子项，是衡量CPU、内存性能的CPU2000和Web服务器性能的web2005。另外还有一个衡量Java服务器性能的jbb2005，近年来也逐渐受到关注。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">除了TPC家族，SPEC家族也是广为人知的一大体系。SPEC指标体系由&nbsp;Standard&nbsp;Performance&nbsp;Evaluation&nbsp;Corp.制定，目前主要包括针对CPU性能的SPEC&nbsp;CPU2000（已有CPU2006，但尚无数据）、针对Web服务器的SPECweb2005、针对高性能计算的SPEC&nbsp;HPC2002与SPEC&nbsp;MPI2006、针对Java应用的jAppServer2004与JBB2005，以及对图形系统、网络和邮件服务器的测试指标。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">SPEC&nbsp;CPU&nbsp;2006</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">SPEC&nbsp;CPU&nbsp;2006是SPEC组织推出的CPU子系统评估软件最新版，在早些年，业界使用的是其上一个版本SPEC&nbsp;CPU&nbsp;2000。和SPEC&nbsp;CPU&nbsp;2000一样，SPEC&nbsp;CPU&nbsp;2006包括了CINT2006和C&nbsp;FP2006两个子项目，前者用于测量和对比整数性能，而后者则用于测量和对比浮点性能，SPEC&nbsp;CPU&nbsp;2006中对SPEC&nbsp;CPU&nbsp;2000中的一些测试进行了升级，并抛弃/加入了一些测试，因此两个版本测试得分并没有可比较性。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">SPEC&nbsp;CPU测试中，测试系统的处理器、内存子系统和使用到的编译器（SPEC&nbsp;CPU提供的是源代码，并且允许测试用户进行一定的编译优化）都会影响最终的测试性能，而I/O（磁盘）、网络、操作系统和图形子系统对于SPEC&nbsp;CPU2006的影响非常的小。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">An&nbsp;ounce&nbsp;of&nbsp;honest&nbsp;data&nbsp;is&nbsp;worth&nbsp;a&nbsp;pound&nbsp;of</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">marketing&nbsp;hype（一盎司诚实的数据值得一磅的市场宣传）是SPEC组织成立的座右铭，为了保持数据的公平、可信度以及有效，SPEC&nbsp;CPU测试使用了现实世界的应用程序，而不是用循环的算术操作来进行基准测试。SPEC&nbsp;CPU&nbsp;2006包括了12项整数运算和17项浮点运算，除此之外，还有两个随机数产生测试程序998.sperand（整数）和999.specrand（浮</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">点），它们虽然也包含在套件中并得到运行，但是它们并不进行计时以获得得分。这两个测试主要是用来验证一些其他组件中会用到的PRNG随机数生成功能的正&nbsp;确性。各个测试组件基本上由C和Fortran语言编写，有7个测试项目使用了C++语言，而Fortran语言均用来编写浮点部分。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">CINT2006包括C编译程序、量子计算机仿真、下象棋程序等，CFP2006包括有限元模&nbsp;型结构化网格法、分子动力学质点法、流体动力学稀疏线性代数法等。为了简化测试结果，SPEC决定使用单一的数字来归纳所有12种整数基准程序。具体方法&nbsp;是将被测计算机的执行时间标准化，即将被测计算机的执行时间除以一个参考处理器的执行时间，结果称为SPECratio。SPECratio值越大，表示&nbsp;性能越快（因为SPECratio是执行时间的倒数）。CINT2006或CFP2006的综合测试结果是取SPECratio的几何平均值。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">JAVA应用性能测试——SPEC&nbsp;jbb2005</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">SPECjbb2005是由Standard&nbsp;Performance&nbsp;Evaluation&nbsp;Corp(标准性能评估组织)提供的、专供检测服务器&nbsp;JAVA应用性能的测试软件，SPEC是由著名计算机厂商、系统集成商、大学、研究所、出版商等组成的非赢利性组织。目前，SPEC得到了包括IBM、&nbsp;HP、Intel、Compaq等主要服务器厂商的认可。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">SPECjbb2005(Java服务器基准)是评估服务器端JAVA性能的SPEC测试工具。和以前的SPECjbb2000一</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">样，SPECjbb2005通过模拟三层C/S系统(主要是中间层)来评估服务器端JAVA的性能。该测试软件运行JVM(Java虚拟机)、JIT&nbsp;(Just-In-Time)编译器、碎片收集、线程以及操作系统的其他任务。它也测量CPU、Cache、内存和&nbsp;SMP的性能。SPECjbb2005通过提供面向对象方式运行的、新的增强的工作负载，来反映真实应用系统的情况。另外，SPECjbb2005也引入&nbsp;了一些新的特性，如XML处理和BigDecimal计算，以保证测试结果能更确切地反映当前的实际应用。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">SPECjbb2005是一种被广泛使用的工业标准基准测试。概括来讲，每个"warehouse"会产生一个独立的线程，从而决定测试线程的并发数。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">SPEC&nbsp;Web2005</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Web服务参考Web2005</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">作为SPECweb99和SPECweb99_SSL的继承者，SPECweb2005延续了SPEC的传统，为Web用户提供客观的Web服务器系统性能测试基准。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">SPEC</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Web2005测试的原理，是通过多台客户机向服务器发出Http&nbsp;Get请求，请求调用Web服务器上的网页文件，这些文件从数千字节到数兆字节不等。在相同的时间里，服务器回答的请求越多，就表明服务器对客户端的处理能力越强，系统的Web性能就越好。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">基于快速发展的Web技术，与上一代测试基准相比，SPECweb2005基准包括许多新增强特性，其中包括：</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">●&nbsp;测量并发用户会话。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">●&nbsp;相关动态内容：包括PHP和JSP实施。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">●&nbsp;使用两个并行HTTP连接请求页面镜像。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">●&nbsp;多种标准化的工作负载：银行业（HTTPS）、电子商务（HTTP&nbsp;and&nbsp;HTTPS）和支持（HTTP）。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">●&nbsp;使用If-Modified-Since请求模拟模拟器缓存效果。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">●&nbsp;文件访问与今天的真实Web服务器访问模式匹配度更高。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">参考资料</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">1.&nbsp;</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/899.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">http://baike.baidu.com/view/899.htm</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">2.&nbsp;</SPAN><SPAN><A 
+href="http://server.zol.com.cn/292/2923839.html"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">http://server.zol.com.cn/292/2923839.html</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">3.&nbsp;</SPAN><SPAN><A 
+href="http://zhidao.baidu.com/question/657278.html"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">http://zhidao.baidu.com/question/657278.html</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">4.&nbsp;</SPAN><SPAN><A 
+href="http://www.ibm.com/cn/systems/info/x86servers/ex5/index.shtml"><SPAN 
+class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">http://www.ibm.com/cn/systems/info/x86servers/ex5/index.shtml</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">5.&nbsp;</SPAN><SPAN><A 
+href="http://www.redbooks.ibm.com/portals/systemx"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">http://www.redbooks.ibm.com/portals/systemx</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">6.&nbsp;</SPAN><SPAN><A 
+href="http://www.redbooks.ibm.com/abstracts/redp4743.html?Open"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">http://www.redbooks.ibm.com/abstracts/redp4743.html?Open</SPAN></A></SPAN></P>
+<P 
+class=MsoNormal><!--EndFragment--><BR></P></SPAN><!--EndFragment--></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN><!--EndFragment--></DIV>
+<DIV>
+<HR>
+</DIV>
+<DIV class=footer>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright &copy;2015 <A href="" target=_blank></A>. 
+All Rights Reserved. </P></DIV></BODY></HTML>

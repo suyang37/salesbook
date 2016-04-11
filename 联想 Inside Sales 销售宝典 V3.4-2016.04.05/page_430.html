@@ -1,0 +1,829 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns:o = 
+"urn:schemas-microsoft-com:office:office"><HEAD><TITLE>总线基础</TITLE>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 11.00.9600.18057"><LINK rel=stylesheet 
+href="_template.css"></HEAD>
+<BODY>
+<DIV id=nsbanner>
+<DIV id=bannerrow1>
+<TABLE class=bannerparthead>
+  <TBODY>
+  <TR id=hdr>
+    <TD class=runninghead noWrap>New Documentation</TD></TR></TBODY></TABLE></DIV>
+<DIV id=titlerow>
+<H1 class=dtH1>总线基础</H1></DIV></DIV>
+<DIV id=nstext><BR>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">一.&nbsp;总线概念</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">所谓总线（Bus），是指计算机设备和设备之间传输信息的公共数据通道。总线是连接计算机硬件系统内多种设备的通信线路，它的一个重要特征是由总线上的所有设备共享，可以将计算机系统内的多种设备连接到总线上。如果是某两个设备或设备之间专用的信号连线，就不能称之为总线。系统总线架构图如下所示：&nbsp;&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN><IMG 
+src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/ksohtml/wpsB074.tmp.png" 
+width=539 height=383></SPAN></P><SPAN>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">微机中的总线分为数据总线、地址总线和控制总线3类。不同型号的CPU芯片，其数据总线、地址总线和控制总线的条数可能不同。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">数据总线DB用来传送数据信息，是双向的。CPU既可通过DB从内存或输入设备读入数据，又可通过DB将内部数据送至内存或输出设备。DB的宽度决定了CPU和计算机其他设备之间每次交换数据的位数。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">地址总线AB用于传送CPU发出的地址信息，是单向的。传送地址信息的目的是指明与CPU交换信息的内存单元或I/O设备。存储器是按地址访问的，所以每个&nbsp;存储单元都有一个固定地址，要访问1MB存储器中的任一单元，需要给出1M个地址，即需要20位地址（220=1M）。因此，地址总线的宽度决定了CPU&nbsp;的最大寻址能力。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">控制总线CB用来传送控制信号、时序信号和状态信息等。其中有的是CPU向内存或外部设备发出的信息，有的是内存或外部设备向CPU发出的信息。显然，CB中的每一条线的信息传送方向是一定的、单向的，但作为一个整体则是双向的。所以，在各种结构框图中，凡涉及到控制总线CB，均是以双向线表示。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">总线的性能直接影响到整机系统的性能，而且任何系统的研制和外围模块的开发都必须依从所采用的总线规范。总线技术随着微机结构的改进而不断发展与完善。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<H2 style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">二.&nbsp;常见总线</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></H2>
+<H3 style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">QPI总线</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></H3>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">Intel的QuickPath&nbsp;Interconnect技术缩写为QPI，译为快速通道互联,&nbsp;用来实现处理器之间的直接互联.&nbsp;QPI是一种基于包传输的串行式高速点对点连接协议，采用差分信号与专门的时钟进行传输。它的特点是：高速带宽,低功耗,支持热插拔。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<H3 style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">Memory总线（内存总线）</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></H3>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">用来实现处理器和内存的之间的连接.处理器里集成的内存控制器负责通过内存总线和内存模组通讯，例如寻址、读写等。目前内存总线所支持的内存模组有DDR2，&nbsp;DDR3,&nbsp;将来还会支持DDR4。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<H3 style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">JTAG接口</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></H3>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">主要用于</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/26651.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">芯片</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">或处理器内部测试和调试的接口.通过连接调试器,&nbsp;可以对</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/26651.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">芯片</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">或处理器的运行进行跟踪和调试。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<H3 style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">DMI总线</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></H3>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">DMI是指Direct&nbsp;Media&nbsp;Interface(直接媒体接口)。用来连接处理器和南桥的总线.它是基于PCIE总线，因此具有PCI-E总线的优势，这个高速接口集成了高级优先服务，允许并发通讯和真正的同步传输能力。它的基本功能对于软件是完全透明的，因此早期的软件也可以正常操作。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<H3 style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">USB总线</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></H3>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">USB，是英文Universal&nbsp;Serial&nbsp;BUS（</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/474321.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">通用串行总线</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">）的缩写，而其中文简称为“通串线，是一个</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/771591.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">外部总线</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">标准，用于规范电脑与</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/206732.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">外部设备</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">的连接和通讯。USB接口支持设备的</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/33701.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">即插即用</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">和</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/7091.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">热插拔</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">功能。USB总线会根据</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/1162088.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">外设</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">情况在两种传输模式中自动地动态转换。USB是基于令牌的总线。类似于</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/54261.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">令牌环</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">网络或FDDI基于令牌的总线。USB主控制器广播令牌，总线上设备检测令牌中的地址是否与自身相符，通过接收或发送数据给</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/23880.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">主机</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">来响应。USB通过支持悬挂/恢复操作来管理USB总线电源。USB系统采用</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/543303.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">级联</SPAN></A></SPAN><SPAN><A 
+href="http://baike.baidu.com/view/302338.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">星型拓扑</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">，该拓扑由三个基本部分组成：</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/23880.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">主机</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">（Host），</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/7770.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">集线器</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">（Hub）和功能设备。</SPAN></P><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">
+<H3 style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">SMBUS/I2C总线</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></H3>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">I2C（Inter－Integrated&nbsp;Circuit）总线和SMBus&nbsp;（System&nbsp;Management&nbsp;Bus&nbsp;的缩写，译为系统管理</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/1389.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">总线</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">）是一种二线制串行</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/1389.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">总线</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">，它主要应用的场合：不需要高速通讯，但希望通过一条廉价并且功能强大的</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/1389.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">总线</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">（由两条线组成），来控制主板上的设备并收集相应的信息。SMBUS大部分基于</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/751581.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">I2C总线</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">规范。和&nbsp;I2C一样，SMBus不需增加额外</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/641241.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">引脚</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">，创建该</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/1389.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">总线</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">主要是为了增加新的功能特性，但只工作在100kHz且专门面向智能</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/17046.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">电池</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">管理应用,&nbsp;也被用来连接各种设备，包括电源相关设备，系统传感器，EEPROM等等。它工作在主/从模式：主器件提供时钟，在其发起一次传输时提供一个起始位，在其终止一次传输时提供一个停止位；从器件拥有一个唯一的7或10位从器件地址。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">SMBus与I2C</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/1389.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">总线</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">之间在时序特性上存在一些差别。首先，SMBus需要一定数据保持时间，而&nbsp;I2C</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/1389.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">总线</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">则&nbsp;是从内部延长数据保持时间。SMBus具有超时功能，因此当SCL太低而超过35&nbsp;ms时，从器件将复位正在进行的通信。相反，I2C采用硬件复位。SMBus具有一种警报响应地址(ARA)，因此当从器件产生一个中断时，它不会马上清&nbsp;除中断，而是一直保持到其收到一个由主器件发送的含有其地址的ARA为止。SMBus只工作在从10kHz到最高100kHz。最低</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/1084808.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">工作频率</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">10kHz是由SMBus超时功能决定的。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<H3 style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">SPI总线</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></H3>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">SPI(Serial&nbsp;Peripheral&nbsp;Interface--</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/7974045.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">串行外设接口</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">)</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/1389.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">总线</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">系统是一种同步串行外设接口，它可以使南桥与各种外围设备以串行方式进行通信以交换信息。SPI接口主要应用在连接EEPROM、FLASH、</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/1031044.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">实时时钟</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">、AD</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/110440.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">转换器</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">，还有</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/529231.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">数字信号处理器</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">和数字信号解码器之间。在Intel架构中放BIOS/UEFI固件的Flash可以通过SPI总线和南桥连接。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<H3 style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">LPC总线</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></H3>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">LPC(Low&nbsp;Pin&nbsp;Count,&nbsp;少引脚数)接口一个取代传统ISA总线的一种新接口规范，主要用于和传统的外围设备连接让系统能向下兼容。以往为了连接ISA扩充槽、</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/49898.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">适配器</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">、ROM&nbsp;</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/1146603.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">BIOS芯片</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">、Super&nbsp;I/O等接口，</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/16636.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">南桥芯片</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">必须保留一个ISA总线，并且连通Super&nbsp;I/O芯片，以控制传统的外围设备。传统ISA&nbsp;总线速率大约在7.159~8.33MHz，提供的理论尖峰传输值为16MB/s，但是ISA总线与传统的PCI总线的电气特性、信号定义方式迥异，南桥芯片、Super&nbsp;I/O芯片得多浪费针脚来做处理，主板的线路设计也显得复杂。&nbsp;intel所定义的LPC接口，将以往ISA&nbsp;BUS的地址/数据分离译码，改成类似PCI的地址/数据信号线共享的译码方式，信号线数量大幅降低，工作速率由</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/2815.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">PCI总线</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">速率同步驱动，虽然改良过的LPC接口一样维持最大传输值16MB/s，不过所需要的信号脚位数大幅降低25~30个，以LPC接口设计的Super&nbsp;I/O芯片、Flash芯片都能享有脚位数减少、体积微缩的好处，主板的设计也可以简化，这也就是取名LPC——Low&nbsp;Pin&nbsp;Count的原因。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<H3 style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">PS/2接口</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></H3>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">PS/2&nbsp;(Personal&nbsp;System&nbsp;2,&nbsp;个人系统2)接口主要用于连接输入设备，而不是传输接口。所以PS2口根本没有传输速率的概念，只有扫描速率。PS/2接口设备不支持</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/7091.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">热插拔</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">，强行带电插拔有可能烧毁</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/1143.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">主板</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<H3 style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">RS-232接口</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></H3>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">RS-232-C是</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/2356154.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">美国电子工业协会</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">EIA（Electronic&nbsp;Industry&nbsp;Association）制定的一种</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/817251.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">异步传输</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">串行物理接口标准。RS是</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/170434.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">英文</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">“推荐标准”的缩写，232为标识号，C表示修改次数。</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/2391828.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">RS-232-C总线</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">标准设有25条信号线。一般个人</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/3314.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">计算机</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">上会有两组&nbsp;RS-232&nbsp;接口，分别称为&nbsp;COM1&nbsp;和&nbsp;COM2。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<H3 style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">LPT接口</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></H3>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">打印终端(line&nbsp;print&nbsp;terminal)接口，通常称呼为LPT</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/702464.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">并口</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">，是一种增强了的双向并行传输接口，在USB接口出现以前是</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/7818.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">扫描仪</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">，</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/7836.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">打印机</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">最常用的接口。其默认的</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/1607576.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">中断号</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">是IRQ7，采用25脚的DB-25接头。</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/702464.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">并口</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">的工作模式主要有三种：1、SPP标准工作模式。SPP数据是半双工单向传输，</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/634861.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">传输速率</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">较慢，仅为15Kbps，但应用较为广泛，一般设为默认的工作模式。2、EPP增强型工作模式。EPP采用双向半双工数据传输，其</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/634861.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">传输速率</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">比SPP高很多，可达2Mbps，目前已有不少外设使用此工作模式。3、ECP扩充型工作模式。ECP采用双向全双工数据传输，</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/634861.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">传输速率</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">比EPP还要高一些，但目前支持的设备少。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<H3 style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">前端总线</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></H3>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">前端总线的英文名字是Front&nbsp;Side&nbsp;Bus，通常用FSB表示，是将CPU连接到北桥芯片的总线。选购主板和&nbsp;CPU时，要注意两者搭配问题，一般来说，如果CPU不超频，那么前端总线是由CPU决定的，如果主板不支持CPU所需要的前端总线，系统就无法工作。也&nbsp;就是说，需要主板和CPU都支持某个前端总线，系统才能工作，只不过一个CPU默认的前端总线是唯一的，因此看一个系统的前端总线主要看CPU就可以。北桥芯片负责联系内存、显卡等数据吞吐量最大的部件，并和南桥芯片连接。CPU就是通过前端总线（FSB）连接到北桥芯片，进而通过北桥芯片和内存、显卡交换数据。前端总线是CPU和外界交换数据的最主要通道，因此前端总线的数据传输能力对计算机整体性能作用很大，如果没足够快的前端总线，再强的CPU也不能明显提高计算机整体速度。数据传输最大带宽取决于所有同时传输的数据的宽度和传输频率，即数据带宽＝（总线频率×数据位宽）÷8。下图为FSB示意图。</SPAN></P><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">
+<P class=p style="TEXT-ALIGN: center; mso-pagination: widow-orphan"><SPAN><A 
+href="http://tupian.hudong.com/a0_64_41_01300000170442121368414201450_jpg.html?prd=zhengwenye_left_neirong_tupian"><SPAN 
+class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single"><BR></SPAN><SPAN 
+class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single"><BR></SPAN><SPAN><IMG 
+src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/ksohtml/wps417D.tmp.png" 
+width=300 height=225></SPAN><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single"><BR></SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<H3 style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">PCI总线</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></H3>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">Intel公司首先提出了PCI的概念，并联合IBM、Compaq、AST、HP、DEC等100多家公司成立了PCI集团，其英文全称为：Peripheral&nbsp;Component&nbsp;Interconnect&nbsp;Special&nbsp;Interest</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">Group(外围部件互连专业组)，简称PCISIG。PCI是一种先进的局部总线，已成为局部总线的新标准。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">最早提出的</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/2815.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">PCI总线</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">工作在33MHz频率之下，传输</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/10821.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">带宽</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">达到132MB/s(33MHz&nbsp;*&nbsp;32bit/8)，基本上满足了当时处理器的发展需要。随着对更高性能的要求，后来又提出把PCI&nbsp;</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/1389.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">总线</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">的频率提升到66MHz，传输</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/10821.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">带宽</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">能达到264MB/s。1993年又提出了64bit的PCI总线，称为</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/351168.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">PCI-X</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">，目前广泛采用的是32-bit、33MHz或者32-bit、66MHz的PCI&nbsp;总线，64bit的PCI-X插槽更多是应用于服务器产品。和PCIE总线一样，它用来外接扩展板卡，支持</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/33701.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">即插即用</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">&nbsp;（plug&nbsp;and&nbsp;play）。但和PCIE不同，PCI允许</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/65165.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">多路复用</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">技术（分时复用），即允许一个以上的电子信号同时存在于</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/1389.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">总线</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">之上，但相对PCIE，它的带宽和速度比较慢。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">PCI总线是一种不依附于某个具体处理器的局部总线。从结构上看，PCI是在CPU和原来的系统总线之间插入的一级总线，具体由一个桥接电路实现对这一层的管理，并实现上下之间的接口以协调数据的传送。管理器提供了信号缓冲，使之能支持10种外设，并能在高时钟频率下保持高性能。PCI总线也支持总线主控技术，允许智能设备在需要时取得总线控制权，以加速数据传送。&nbsp;PCI总线支持10台外设&nbsp;,总线时钟频率33.3MHz/66MHz，最大数据传输速率133MB/s，时钟同步方式&nbsp;，与CPU及时钟频率无关&nbsp;，总线宽度&nbsp;32位（5V）/64位（3.3V），能自动识别外设&nbsp;，特别适合与Intel的CPU协同工作；&nbsp;具有与处理器和存储器子系统完全并行操作的能力，具有隐含的中央仲裁系统，采用多路复用方式（地址线和数据线）减少了引脚数，支持64位寻址，完全的多总线主控能力，提供地址和数据的奇偶校验，可以转换5V和3.3V的信号环境。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<H3 style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">PCI-E总线</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></H3>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">PCI&nbsp;Express是新一代的</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/653587.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">总线接口</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">。早在2001年的春季，</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/15281.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">英特尔</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">公司就提出了要用新一代的技术取代PCI</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/1389.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">总线</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">和多种</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/26651.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">芯片</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">的内部连接，并称之为第三代</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/950897.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">I/O总线</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">技术。随后在2001年底，包括Intel、AMD、DELL、IBM在内的20多家业界主导公司开始起草新技术的规范，并在2002年完成，对其正式命名为PCI&nbsp;Express。它采用了目前业内流行的点对点串行连接，比起PCI以及更早期的计算机</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/1389.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">总线</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">的共享并行架构，每个设备都有自己的专用连接，不需要向整个总线请求</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/10821.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">带宽</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">，而且可以把</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/32385.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">数据传输率</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">提高到一个很高的频率，达到PCI所不能提供的高带宽。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">PCI&nbsp;Express的接口根据</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/1389.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">总线</SPAN></A></SPAN><SPAN><A 
+href="http://baike.baidu.com/view/1128.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">位宽</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">不同而有所差异，包括X1、X4、X8以及X16（X2模式将用于内部接口而非插槽模式）。较短的PCI&nbsp;Express卡可以插入较长的PCI&nbsp;Express插槽中使用。PCI&nbsp;Express接口能够支持热拔插，这也是个不小的飞跃。PCI&nbsp;Express卡支持的三种电压分别为+3.3V、3.3Vaux以及+12V。用于取代</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/4204.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">AGP</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">接口的PCI&nbsp;Express接口</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/1128.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">位宽</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">为X16，将能够提供5GB/s的</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/10821.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">带宽</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">，即便有编码上的损耗但仍能够提供4GB/s左右的实际带宽，远远超过AGP&nbsp;8X的2.1GB/s的带宽。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">PCI&nbsp;Express规格从1条通道连接到32条通道连接，有非常强的伸缩性，以满足不同系统设备对数据传输</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/10821.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">带宽</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">不同的需求。例如，PCI&nbsp;Express&nbsp;X1规格支持双向数据传输，每向数据传输</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/10821.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">带宽</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">250MB/s，PCI&nbsp;Express&nbsp;X1已经可以满足主流声效</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/26651.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">芯片</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">、</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/325717.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">网卡芯片</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">和存储设备对数据传输带宽的需求，但是远远无法满足图形芯片对数据传输带宽的需求。因此，必须采用PCI&nbsp;Express&nbsp;X16，即16条点对点数据传输通道连接来取代传统的AGP</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/1389.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">总线</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">。PCI&nbsp;Express&nbsp;X16也支持双向数据传输，每向数据传输</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/10821.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">带宽</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">高达4GB/s，双向数据传输带宽有8GB/s之多。</SPAN></P><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">PCIe属于高速串行点对点双通道高带宽传输，所连接的设备分配独享通道带宽，不共享资源，主要支持主动电源管理，错误报告，端对端的可靠性传输，热插拔以及服务质量(</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/20897.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">QOS</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">)等功能。它主要用来和一些需要高速通讯的外部板卡设备控制器连接,例如显示卡,网卡,声卡等,&nbsp;相对于老的并行的PCI总线,它具有针脚少,速度快,&nbsp;更好的电源管理等优点。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<H3 style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">PCI-Express&nbsp;3.0&nbsp;规范</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></H3>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">早在2007年上半年PCI-E&nbsp;2.0版规范刚刚公布的时候，PCI&nbsp;Express技术标准组织PCI-SIG就准备用两年多的时间将其快速进化到第三代，但是谁也没想到PCI-E&nbsp;3.0的酝酿过程会如此一波三折，直到今天才终于修成正果。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">PCI-SIG主席兼总裁几乎泪流满面：“PCI-SIG始终致力于I/O创新，我们也很骄傲</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">地向我们的成员发布PCI-E&nbsp;3.0规范。PCI-E&nbsp;3.0架构从细节上对前两代PCI-E规范进行了极大地改进，为我们的成员在各自领域继续创新提供了所必需的性能和功能。”</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">在对可制造性、成本、功耗、复杂性、兼容性等诸多方面进行综合、平衡之后，PCI-E&nbsp;3.0规范将数据传输率提升到8GHz|8GT/s（最初也预想过10GHz），并保持了对PCI-E&nbsp;2.x/1.x的向下兼容，继续支持2.5GHz、5GHz信号机制。基于此，PCI-E&nbsp;3.0架构单信道（x1）单向</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/10821.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">带宽</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">即可接近1GB/s，十六信道（x16）双向带宽更是可达32GB/s。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">PCI-E&nbsp;3.0同时还特别增加了128b/130b解码机制，可以确保几乎100%的</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/5346403.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">传输效率</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">，相比此前版本的8b/10b机制提升了25%，从而促成了传输</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/10821.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">带宽</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">的翻番，延续了PCI-E规范的一贯传统。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">新规范在信号和</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/37.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">软件</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">层的其他增强之处还有数据复用指示、原子操作、动态电源调整机制、延迟容许报告、宽松传输排序、基地址寄存器（BAR）大小调整、I/O页面错误等等，从而全方位提升平台效率、软件模型弹性、架构伸缩性。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">PCI-E&nbsp;3.0规范完整文档现已向PCI-SIG组织成员公布其中详细描述了PCI-E架构、互联属性、结构管理、</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/897136.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">编程接口</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">等等，但没有公开发表。另外，intel&nbsp;X79高端</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/15282.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">芯片组</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">经已完整支持</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/44375.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">pci-e</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">&nbsp;3.0规格，AMD最新架构旗舰</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/2882.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">显卡</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">AMD&nbsp;Radeon&nbsp;7970，以及其他采用pci-e&nbsp;3.0规格的显卡将于2012年陆续发布。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<H3 style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">PCI&nbsp;Express总线的特点和长处</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></H3>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">PCI&nbsp;Express</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/1389.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">总线</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">是一种完全不同于过去PCI总线的一种全新总线规范，与PCI总线共享并行架构相比，PCI&nbsp;Express总线是一种点对点串行连接的设备连接方式，点对点意味着每一个PCI&nbsp;Express设备都拥有自己独立的</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/702919.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">数据连接</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">，各个设备之间并发的数据传输互不影响，而对于过去PCI那种共享总线方式，PCI总线上只能有一个设备进行通信，一旦PCI总线上挂接的设备增多，每个设备的实际传输速率就会下降，性能得不到保证。现在，PCI&nbsp;Express以</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/1145124.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">点对点</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">的方式处理通信，每个设备在要求传输数据的时候各自建立自己的传输通道，对于其他设备这个通道是封闭的，这样的操作保证了通道的专有性，避免其他设备的干扰。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">在</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/634861.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">传输速率</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">方面，PCI&nbsp;Express</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/1389.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">总线</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">利用串行的连接特点将能轻松将</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/2827566.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">数据传输速度</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">提&nbsp;到一个很高的频率，达到远超出PCI总线的传输速率。PCI&nbsp;Express的接口根据总线位宽不同而有所差异，包括x1、x4、x8以及x16(x2模式将用于内部接口而非插槽模式），其中X1的传输速度为&nbsp;250MB/s，而X16就是等于16倍于X1的速度，即是4GB/s。与此同时，PCI&nbsp;Express总线支持双向传输模式，还可以运行全双工模式，它的双单工连接能提供更高的</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/634861.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">传输速率</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">和质量，它们之间的差异跟半双工和全双工类似。因此连接的每个装置都可以使用最大</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/10821.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">带宽</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">，PCI&nbsp;Express接口设备将有着比PCI设备优越的多的资源可用。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal>
+<TABLE 
+style="WIDTH: 345pt; BORDER-COLLAPSE: collapse; MARGIN-LEFT: -2.1pt; mso-padding-alt: 0.0000pt 0.0000pt 0.0000pt 0.0000pt" 
+align=center>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-TOP: windowtext 0.75pt outset; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 115pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: windowtext 0.75pt outset; PADDING-RIGHT: 0pt; mso-border-left-alt: 0.7500pt outset windowtext; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=middle width=153>
+      <P class=p style="TEXT-ALIGN: center; mso-pagination: widow-orphan"><SPAN 
+      class=15 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'">模式</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: windowtext 0.75pt outset; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 115pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=middle width=153>
+      <P class=p style="TEXT-ALIGN: center; mso-pagination: widow-orphan"><SPAN 
+      class=15 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'">双向传输模式</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: windowtext 0.75pt outset; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 115pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=middle width=153>
+      <P class=p style="TEXT-ALIGN: center; mso-pagination: widow-orphan"><SPAN 
+      class=15 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'">数据传输模式</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 115pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: windowtext 0.75pt outset; PADDING-RIGHT: 0pt; mso-border-left-alt: 0.7500pt outset windowtext; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=middle width=153>
+      <P class=p style="TEXT-ALIGN: center; mso-pagination: widow-orphan"><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">PCI&nbsp;Express&nbsp;x1</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 115pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=middle width=153>
+      <P class=p style="TEXT-ALIGN: center; mso-pagination: widow-orphan"><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">500MB/s</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 115pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=middle width=153>
+      <P class=p style="TEXT-ALIGN: center; mso-pagination: widow-orphan"><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">250MB/s</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 115pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: windowtext 0.75pt outset; PADDING-RIGHT: 0pt; mso-border-left-alt: 0.7500pt outset windowtext; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=middle width=153>
+      <P class=p style="TEXT-ALIGN: center; mso-pagination: widow-orphan"><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">PCI&nbsp;Express&nbsp;x2</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 115pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=middle width=153>
+      <P class=p style="TEXT-ALIGN: center; mso-pagination: widow-orphan"><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">1GB/s</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 115pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=middle width=153>
+      <P class=p style="TEXT-ALIGN: center; mso-pagination: widow-orphan"><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">500MB/s</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 115pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: windowtext 0.75pt outset; PADDING-RIGHT: 0pt; mso-border-left-alt: 0.7500pt outset windowtext; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=middle width=153>
+      <P class=p style="TEXT-ALIGN: center; mso-pagination: widow-orphan"><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">PCI&nbsp;Express&nbsp;x4</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 115pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=middle width=153>
+      <P class=p style="TEXT-ALIGN: center; mso-pagination: widow-orphan"><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">2GB/s</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 115pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=middle width=153>
+      <P class=p style="TEXT-ALIGN: center; mso-pagination: widow-orphan"><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">1GB/s</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 115pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: windowtext 0.75pt outset; PADDING-RIGHT: 0pt; mso-border-left-alt: 0.7500pt outset windowtext; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=middle width=153>
+      <P class=p style="TEXT-ALIGN: center; mso-pagination: widow-orphan"><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">PCI&nbsp;Express&nbsp;x8</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 115pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=middle width=153>
+      <P class=p style="TEXT-ALIGN: center; mso-pagination: widow-orphan"><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">4GB/s</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 115pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=middle width=153>
+      <P class=p style="TEXT-ALIGN: center; mso-pagination: widow-orphan"><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">2GB/s</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 115pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: windowtext 0.75pt outset; PADDING-RIGHT: 0pt; mso-border-left-alt: 0.7500pt outset windowtext; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=middle width=153>
+      <P class=p style="TEXT-ALIGN: center; mso-pagination: widow-orphan"><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">PCI&nbsp;Express&nbsp;x16</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 115pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=middle width=153>
+      <P class=p style="TEXT-ALIGN: center; mso-pagination: widow-orphan"><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">8GB/s</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 115pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=middle width=153>
+      <P class=p style="TEXT-ALIGN: center; mso-pagination: widow-orphan"><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">4GB/s</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 115pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: windowtext 0.75pt outset; PADDING-RIGHT: 0pt; mso-border-left-alt: 0.7500pt outset windowtext; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=middle width=153>
+      <P class=p style="TEXT-ALIGN: center; mso-pagination: widow-orphan"><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">PCI&nbsp;Express&nbsp;x32</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 115pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=middle width=153>
+      <P class=p style="TEXT-ALIGN: center; mso-pagination: widow-orphan"><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">16GB/s</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 115pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=middle width=153>
+      <P class=p style="TEXT-ALIGN: center; mso-pagination: widow-orphan"><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">8GB/s</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P></TD></TR></TBODY></TABLE><!--EndFragment--></SPAN></P><!--EndFragment--></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN><!--EndFragment--></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN><!--EndFragment--></SPAN><!--EndFragment--></DIV>
+<DIV id=nstext>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">除了这些，PCI&nbsp;Express设备能够支持热拔插以及热交换特性，支持的三种电压分别为+3.3V、3.3Vaux以及+12V。考虑到现在</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/2882.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">显卡</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">功耗的日益上涨，PCI&nbsp;Express而后在规范中改善了直接从插槽中取电的功率限制，16x的最大提供功率达到了70W，比AGP&nbsp;8X接口有了很大的提高。基本可以满足未来中高端</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/2882.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">显卡</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">的需求。这一点可以从AGP、PCI&nbsp;Express两个不同版本的6600GT上就能明显地看到，后者并不需要外接电源。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN><IMG 
+src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/ksohtml/wpsD525.tmp.png" 
+width=460 height=440></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">可以看到PCI&nbsp;Express只是</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/7601.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">南桥</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">的</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/3989490.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">扩展总线</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">，它与</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/880.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">操作系统</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">无关，所以也保证了它与原有PCI的</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/80015.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">兼容性</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">，也就是说在很长一段时间内在</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/1143.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">主板</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">上PCI&nbsp;Express接口将和PCI接口共存，这也给用户的升级带来了方便。由此可见，PCI&nbsp;Express最大的意义在于它的通用性，不仅可以让它用于南桥和其他设备的连接，也可以延伸到</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/15282.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">芯片组</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">间的连接，甚至也可以用于连接图形芯片，这样，整个I/O系统将重新统一起来，将更进一步简化</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/1130583.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">计算机系统</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">，增加计算机的可移植性和模块化。PCI&nbsp;Express已经为PC的未来发展重新铺设好了路基，下面就要看PCI&nbsp;Express产品的应用情况了。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<H3 style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">硬盘的总线</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></H3>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">一般有SCSI、ATA、SATA等几种。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">SCSI(Small&nbsp;Computer&nbsp;System&nbsp;Interface)，一种用于计算机和智能设备之间（硬盘、软驱、光驱、打印机、扫描仪等）系统级接口的独立处理器标准。&nbsp;SCSI是一种智能的通用接口标准。它是各种计算机与外部设备之间的接口标准。SCSI具有以下特点：SCSI可支持多个设备;SCSI还允许在对一个设备传输数据的同时，另一个设备对其进行数据查找,SCSI占用CPU极低;SCSI设备还具有智能化，SCSI卡自己可对CPU指令进行排队;最快的SCSI总线有160MB/s的带宽。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">ATA技术是一个关于IDE（Integrated&nbsp;Device&nbsp;Electronics）的技术规范族。最初，IDE只是一项企图把控制器与盘体集成在一起为主要意图的硬盘接口技术。&nbsp;随着IDE/EIDE得到的日益广泛的应用，全球标准化协议将该接口自诞生以来使用的技术规范归纳成为全球硬盘标准，这样就产生了ATA（Advanced&nbsp;Technology&nbsp;Attachment）。</SPAN></P><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">SATA全称是Serial&nbsp;Advanced&nbsp;Technology&nbsp;Attachment（</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/4343336.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">串行高级技术附件</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">，一种基于行业标准的串行硬件</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/15529.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">驱动器</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">接口），由Intel、IBM、Dell、APT、Maxtor和Seagate公司共同提出的硬盘接口规范，主要用来后硬盘等大容量存储器的连接。它具有支持热插拔，传输速度快，执行效率高等优点。Serial&nbsp;ATA采用</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/878101.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">串行连接方式</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">，串行ATA</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/1389.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">总线</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">使用</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/30741.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">嵌入式</SPAN></A></SPAN><SPAN><A 
+href="http://baike.baidu.com/view/188811.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">时钟信号</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">，具备了更强的纠错能力，与以往相比其最大的区别在于能对传输指令（不仅仅是数据）进行检查，如果发现错误会自动矫正，这在很大程度上提高了数据传输的可靠性。</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/161117.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">串行接口</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">还具有结构简单、支持热插拔的优点。&nbsp;</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/48072.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">串口硬盘</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">是一种完全不同于并行ATA的新型</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/82486.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">硬盘接口类型</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">，由于采用串行方式传输数据而知名。相对于并行ATA来说，就具有很多的优势。首先，Serial&nbsp;ATA以连续串行的方式传送数据，一次只会传送1位数据。这样能减少SATA接口的</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/364620.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">针脚</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">数目，使连接电缆数目变少，效率也会更高。实际上，Serial&nbsp;ATA&nbsp;仅用四支</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/364620.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">针脚</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">就能完成所有的工作，分别用于连接电缆、连接地线、发送数据和接收数据，同时这样的架构还能降低系统能耗和减小系统复杂性。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN class=15 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'">小型计算机系统接口（SCSI）</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">小型计算机系统接口是一套用于在计算机与外围设备之间进行物理连接和数据传输的标准。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="TEXT-ALIGN: center; mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><BR></SPAN><SPAN><IMG 
+src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/ksohtml/wpsF68.tmp.png" 
+width=428 height=279></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN class=15 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'">串行ATA</SPAN><SPAN 
+class=15 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'"><BR></SPAN><SPAN 
+class=15 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'">（SATA）</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">磁盘、光驱&nbsp;EIDE&nbsp;的替代品</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">SATA&nbsp;1.0&nbsp;速度为&nbsp;150&nbsp;MB/s</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">串行（1&nbsp;位数据路径），点到点专用链路</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">薄型，1&nbsp;米电缆长度</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">每根电缆一台设备</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">支持固定连接或热插拔</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN class=15 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'">串行连接</SPAN><SPAN 
+class=15 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'"><BR></SPAN><SPAN 
+class=15 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'">SCSI&nbsp;(SAS)</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">SAS&nbsp;支持小尺寸、更长的布线距离、更好的寻址能力,并兼容&nbsp;SCSI</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">SAS&nbsp;1.0&nbsp;在</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">SCSI&nbsp;和&nbsp;RAID&nbsp;控制器中替换&nbsp;Ultra320&nbsp;SCSI</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">全双工、双口、点到点连接</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">更高的带宽</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">Ultra320</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">-&nbsp;每通道&nbsp;320&nbsp;MBps</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">SAS</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">–&nbsp;8&nbsp;端口，每个端口支持高达&nbsp;3&nbsp;Gbps&nbsp;的速率</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">宽端口（4&nbsp;口）&nbsp;–&nbsp;12&nbsp;Gbps</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">两个宽端口（8&nbsp;口）–&nbsp;24&nbsp;Gbps</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">受到</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">PCI-X/PCI&nbsp;总线速度的限制</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">更大的驱动支持</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">基于&nbsp;SCSI&nbsp;的产品&nbsp;-&nbsp;每通道&nbsp;14&nbsp;个驱动器</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">基于&nbsp;SAS&nbsp;的产品&nbsp;-&nbsp;每四个端口&nbsp;72&nbsp;个驱动器</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<H2 style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">参考资料</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; FONT-WEIGHT: bold; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></H2>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">1.&nbsp;</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/1389.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">http://baike.baidu.com/view/1389.htm</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">2.&nbsp;</SPAN><SPAN><A 
+href="http://www.hudong.com/wiki/%E6%80%BB%E7%BA%BF"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">http://www.hudong.com/wiki/%E6%80%BB%E7%BA%BF</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">3.&nbsp;</SPAN><SPAN><A 
+href="http://zh.wikipedia.org/wiki/%E6%80%BB%E7%BA%BF"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">http://zh.wikipedia.org/wiki/%E6%80%BB%E7%BA%BF</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">4.&nbsp;</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/14194.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">http://baike.baidu.com/view/14194.htm</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">5.&nbsp;</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/19742.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">http://baike.baidu.com/view/19742.htm</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">6.&nbsp;</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/325942.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">http://baike.baidu.com/view/325942.htm</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P>
+<P class=p style="mso-pagination: widow-orphan"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt">7.&nbsp;</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/44375.htm"><SPAN class=16 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">http://baike.baidu.com/view/44375.htm</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN></P><!--EndFragment--></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 0.0000pt"><o:p></o:p></SPAN><!--EndFragment--></DIV>
+<DIV>&nbsp;</DIV>
+<DIV>
+<HR>
+</DIV>
+<DIV class=footer>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright &copy;2015 <A href="" target=_blank></A>. 
+All Rights Reserved. </P></DIV></BODY></HTML>

@@ -1,0 +1,1025 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns:o = 
+"urn:schemas-microsoft-com:office:office"><HEAD><TITLE>内存基础</TITLE>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 11.00.9600.18057"><LINK rel=stylesheet 
+href="_template.css"></HEAD>
+<BODY>
+<DIV id=nsbanner>
+<DIV id=bannerrow1>
+<TABLE class=bannerparthead>
+  <TBODY>
+  <TR id=hdr>
+    <TD class=runninghead noWrap>New Documentation</TD></TR></TBODY></TABLE></DIV>
+<DIV id=titlerow>
+<H1 class=dtH1>内存基础</H1></DIV></DIV>
+<DIV id=nstext><BR>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">一.&nbsp;内存概述</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">内存是计算机中重要的部件之一，它是与CPU进行沟通的桥梁。计算机中所有程序的运行都是在内存中进行的，因此内存的性能对计算机的影响非常大。&nbsp;内存(Memory)也被称为内存储器，其作用是用于暂时存放CPU中的运算数据，以及与硬盘等外部存储器交换的数据。只要计算机在运行中，CPU就会把需要运算的数据调到内存中进行运算，当运算完成后CPU再将结果传送出来，内存的运行也决定了计算机的稳定运行。内存的特点是存取速率快。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">内存是电脑中的主要部件，它是相对于外存而言的。我们平常使用的程序，如Windows操作系统、打字软件、游戏软件等，一般都是安装在硬盘等&nbsp;外存上的，但仅此是不能使用其功能的，必须把它们调入内存中运行，才能真正使用其功能，我们平时输入一段文字，或玩一个游戏，其实都是在内存中进行的。通常我们把要永久保存的、大量的数据存储在外存上，而把一些临时的或少量的数据和程序放在内存上，当然内存的好坏会直接影响电脑的运行速度。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">二.&nbsp;内存分类</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">内存可以根据存储能力与电源的关系可以分为以下两类：易失性存储器，非易失性存储器。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">非易失性存储器（Non-volatile&nbsp;memory）是指即使电源供应中断，存储器所存储的数据并不会消失，重新供电后，就能够读取内存数据的存储器。主要为RAM(Random&nbsp;access&nbsp;memory，随机访问存储器)，存储单元的内容可按需随意取出或存入，且存取的速度与存储单元的位置无关的存储器。这种存储器在断电时将丢失其存储内容，故主要用于存储短时间使用的程序。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">RAM主要的作用就是存储代码和数据供CPU在需要的时候调用。但是这些数据并不是像用袋子盛米那么简单，更像是图书馆中用有格子的书架存放书籍一样，不但要放进去还要能够在需要的时候准确的调用出来，虽然都是书但是每本书是不同的。对于RAM等存储器来说也是一样的，虽然存储的都是代表0和1的代码，但是不同的组合就是不同的数据。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">让我们重新回到书和书架上来，如果有一个书架上有10行和10列格子（每行和每列都有0-9的编号），有100本书要存放在里面，那么我们使用一个行的编号＋一个列的编号就能确定某一本书的位置。如果已知这本书的编号87，那么我们首先锁定第8行，然后找到第7列就能准确的找到这本书了。在RAM存储器中也是利用了相似的原理。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">现在让我们回到RAM存储器上，对于RAM存储器而言数据总线是用来传入数据或者传出数据的。因为存储器中的存储空间是如果前面提到的存放图书的书架一样通过一定的规则定义的，所以我们可以通过这个规则来把数据存放到存储器上相应的位置，而进行这种定位的工作就要依靠地址总线来实现了。对于CPU来说，RAM就象是一条长长的有很多空格的细线，每个空格都有一个唯一的地址与之相对应。如果CPU想要从RAM中调用数据，它首先需要给地址总线发送地址数据定位要存取的数据，然后等待若干个时钟周期之后，数据总线就会把数据传输给CPU。下面的示意图可以帮助你很好的理解这个过程。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN><IMG 
+src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/ksohtml/wps252E.tmp.png" 
+width=447 height=329></SPAN></P><SPAN>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">上图中的小园点代表RAM中的存储空间，每一个都有一个唯一的地址线同它相连。当地址解码器接收到地址总线送来的地址数据之后，它会根据这个数据定位CPU想要调用的数据所在的位置，然后数据总线就会把其中的数据传送到CPU。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">上面所列举的例子中CPU在一行数据中每次知识存取一个字节的数据，但是在现实世界中是不同的，通常CPU每次需要调用32bit或者是64bit的数据（这是根据不同计算机系统的数据总线的位宽所决定的）。如果数据总线是64bit的话，CPU就会在一个时间中存取8个字节的数据，如果每次还是存取1个字节的数据，64bit总线将不会显示出来任何的优势，我们工作的效率将会降低很多。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">如果RAM对于CPU来说仅仅是一条“线”的话，还不能体现实际的运行情况。因为如果实际情况真的是这样的话，在实际制造芯片的时候，会有很多实际的困难，特别是在需要设计大容量的RAM的时候。所以，一种更好的能够降低成本的方法是让存储信息的“空格”排列为很多行－－每个“空格”对应一个bit存储的位置。这样，从“线”到“矩阵”，如果要存储1024bits的数据，那么你只要使用32x32的矩阵就能够达到这个目的了。很明显，一个32x32的矩阵比一个1024bit的行设备更紧凑，实现起来也更加容易。请看下图：</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN><IMG 
+src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/ksohtml/wps7E37.tmp.png" 
+width=225 height=316></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">知道了RAM的基本结构是什么样子的，我们就下面谈谈当存储字节的过程是怎样的：</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">上面的示意图显示的也仅仅是最简单状态下的情况，也就是当内存条上仅仅只有一个RAM芯片的情况。对于X86处理器，它通过地址总线发出一个具有22位二进制数字的地址编码－－其中11位是行地址，另外11位是列地址，这是通过RAM地址接口进行分离的。行地址解码器（row&nbsp;decoder）将会首先确定行地址，然后列地址解码器（column&nbsp;decoder）将会确定列地址，这样就能确定唯一的存储数据的位置，然后该数据就会通过RAM数据接口将数据传到数据总线。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">按照存储信息的不同，随机存储器又分为静态随机存储器（Static&nbsp;RAM,SRAM)和动态随机存储器（Dynamic&nbsp;RAM,DRAM)。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">静态存储单元（SRAM）</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">优点：速度快、使用简单、不需刷新、静态功耗极低；常用作Cache</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">缺点：元件数多、集成度低、运行功耗大</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">常用的SRAM集成芯片：6116(2K×8位)，6264(8K×8位)，62256(32K×8位)，2114(1K×4位)</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">动态存储单元（DRAM）</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">优点：&nbsp;集成度远高于SRAM、功耗低，价格也低</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">缺点：因需刷新而使外围电路复杂；刷新也使存取速度较SRAM慢，所以在计算机中，DRAM常用于作主存储器。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">由于DRAM存储单元的结构简单，所用元件少，集成度高，功耗低，所以目前已成为大容量RAM的主流产品。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">同步动态随机存储器（SDRAM）</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">SDRAM是Synchronous&nbsp;Dynamic&nbsp;RAM（同步动态随机存储器）的简称。SDRAM将CPU与RAM通过一个相同的时钟锁在一起，使RAM和CPU能够共享一个</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/85561.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">时钟周期</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">，以相同的速度同步工作。SDRAM基于双存储体结构，内含两个交错的</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/4992984.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">存储阵列</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">，当CPU从一个存储体或阵列访问数据时，另一个就已为读写数据做好了准备，通过这两个存储阵列的紧密切换，读取效率就能得到成倍的提高。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">SDRAM还有突发读/写功能。突发(Burst)是指在同一行中相邻的存储单元连续进行数据传输的方式，连续传输所涉及到的存储单元(列)的数量就是突发长度(Burst&nbsp;Lengths，BL)。这种读/写方式在高速缓存、多媒体等许多应用中非常有用。因此SDRAM不仅可用作主存储器，在显示卡上的显存方面也有广泛应用。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">非易失性存储器（Non-volatile&nbsp;memory）是指即使电源供应中断，存储器所存储的数据并不会消失，重新供电后，就能够读取内存数据的存储器。主要有以下的类型：</SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN>&nbsp;</P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ROM（Read-only&nbsp;memory，只读存储器）&nbsp;，包括PROM（Programmable&nbsp;ROM，可编程只读存储器），EPROM（Erasable&nbsp;programmable&nbsp;ROM，可擦可编程只读存储器），EEPROM&nbsp;（Electrically&nbsp;erasable&nbsp;programmable&nbsp;ROM，可电擦可编程只读存储器）;Flash&nbsp;memory（闪存）。ROM所存数据，一般是装入整机前事先写好的，整机工作过程中只能读出，而不像随机存储器那样能快速地、方便地加以改写。ROM所存数据稳定，断电后所存数据也不会改变；其结构较简单，读出较方便，因而常用于存储各种固定程序和数据。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">RAM易挥发性随机存取存储器，高速存取，读写时间相等，且与地址无关，如计算机内存等。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ROM只读存储器。断电后信息不丢失，如计算机启动用的BIOS芯片。存取速度很低，（较RAM而言）且不能改写。由于不能改写信息，不能升级，现已很少使用。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">三．内存模组</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Rank和Bank</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">为了保证CPU的正常工作，必须一次传输完CPU在一个传输周期内所需要的数据。而CPU在一个传输周期能接收的数据容量就是CPU数据总线的位宽，单位是bit（位）。为了能一次存储32bit,&nbsp;64bit或者128bit的信息，就需要多个8bit&nbsp;RAM芯片组合在一起，我们称之为物理Bank（Physical&nbsp;Bank，简称P-bank)：以物理Bank来组织存储单元，每个内存物理Bank的位宽同数据总线的位宽一样。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">如果将物理Bank说成是内存颗粒阵列的话，那么逻辑Bank可以看做是数据存储阵列。内存内部是一个存储阵列，指定一个行（Row），再指定一个列（Column），就可以准确地找到所需要的单元格，这就是内存芯片寻址的基本原理。对于内存，每个单元格可称为存储单元（Cell），而这个存储阵列就称为内存芯片的逻辑Bank（Logical&nbsp;Bank，简称L-Bank）。在一个时钟周期内只允许对一个逻辑Bank进行操作，内存芯片的位宽就是逻辑Bank的位宽&nbsp;。&nbsp;所以一般内存芯片中都是将内存容量分成几个阵列来制造，也就是说存在内存芯片中存在多个逻辑Bank。比如16MB芯片（512K&nbsp;x&nbsp;16Bit&nbsp;x&nbsp;2&nbsp;BANK）&nbsp;就有2个Bank。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">为了和逻辑Bank区分，经常把物理Bank称为Rank,&nbsp;逻辑Bank简称为Bank。Channel和Branch</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">一个内存通道（Channel）对应MCH芯片里的一个内存控制器，在一个内存通道上，CPU可分别寻址、读取数据。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">除了以内存通道为单位位，还有跨通道的分支(Branch)&nbsp;。&nbsp;以Intel&nbsp;7300芯片组为例，MCH内集成了4通道内存控制器（Channel&nbsp;0-3，每两个Channel组成一个Branch）。每个通道支持一个Riser，每个Riser最多可安装8条DIMM内存。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;DDR、DDR2和DDR3</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">DDR&nbsp;-&nbsp;Double&nbsp;Data&nbsp;Rate&nbsp;SDRAM：DDR之所以叫这个名字，是因为它能够以相同频率SDRAM的两倍来传输数据，也就是说，每时钟周期传输两次数据，它在时钟信号的上升沿和下降沿传输数据。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">DDR内部的存储阵列采用64位，100MHz的核心频率，通过两条路线同步传输到I/O缓存(或者叫信号放大器)，数据从缓存传输到外部控制器通过一条狭窄的总线（32bit，100MHz）。外部总线每时钟周期传输两次数据，分别通过时钟的上升沿和下降沿传输信号实现双倍传输数据&nbsp;。同时，由于2位预取（2-bit&nbsp;Prefetch）架构可以同存取两个bank的数据，使内部数据总线的带宽提高两倍。结果就是，数据传输率是内部存储阵列频率的两倍。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">DDR2内部存储阵列采用64位，100MHz的核心频率，通过四条传输路线同步传输至I/O缓存（因此，64位模组需要同时使用4个bank&nbsp;），但是数据到从缓存传输到外部控制器通过一条快速而狭窄的总线(16位，200MHz)。外部总线仍然使用双倍传输数据的策略，使我们得到的数据传输率为400MHz。通过4位预取(4-bit&nbsp;prefetch)使内部数据总线的带宽提高四倍。结果就是，在同等核心频率下，DDR2的实际工作频率是DDR的两倍。DDR3则通过&nbsp;8位预取(8-bit&nbsp;prefetch)达到4倍数据传输频率。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">DDR</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">DDR&nbsp;同时在前沿和后沿传输数据</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">有效地倍增吞吐量</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">最大速度限制为&nbsp;400&nbsp;MHz</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">184&nbsp;针插槽</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">在早期&nbsp;xSeries&nbsp;服务器型号中使用</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">DDR2</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">DDR2&nbsp;也同时在前沿和后沿传输数据</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">比&nbsp;DDR&nbsp;耗能低</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">–&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.8&nbsp;V&nbsp;与&nbsp;2.5&nbsp;–&nbsp;2.8&nbsp;V</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">高达&nbsp;800&nbsp;MHz&nbsp;的传输速率</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">240&nbsp;针插槽</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">在&nbsp;xSeries&nbsp;和&nbsp;System&nbsp;x&nbsp;服务器前一代产品中使用</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">FB-DIMM&nbsp;内存</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">结合了&nbsp;DDR2&nbsp;内存的高速内部结构</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">可扩展至&nbsp;192&nbsp;GB</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">6&nbsp;通道</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">–&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;每通道&nbsp;8&nbsp;个&nbsp;DIMM</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">带宽&nbsp;6.7&nbsp;GBps</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">DDR3内存</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">DDR3内存从1H2009开始，随着x3650M2/x3550M2的转型成为市场主流</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">每个系统最多支持128GB内存&nbsp;(计划在2Q09提供,&nbsp;目前不提供)&nbsp;–&nbsp;16个插槽&nbsp;x&nbsp;8GB</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">DDR3的功耗比&nbsp;DDR2低30%</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">DDR3的速度几乎是DDR2的2倍</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">由于改进了FBGA封装方法，DDR3内存与DDR2相比在以下领域有所进步：</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ü&nbsp;&nbsp;提高了内存密度</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ü&nbsp;&nbsp;提高了信号质量</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ü&nbsp;&nbsp;提高了信号完整性</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ü&nbsp;&nbsp;提高了机械可靠性</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ü&nbsp;&nbsp;改进了散热设计</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ü&nbsp;&nbsp;DDR</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ü&nbsp;&nbsp;DDR=Double&nbsp;Data&nbsp;Rate双倍速率同步动态随机存储器。严格的说DDR应该叫DDR&nbsp;SDRAM，人们习惯称为DDR，其中，SDRAM&nbsp;是Synchronous&nbsp;Dynamic&nbsp;Random&nbsp;Access&nbsp;Memory的缩写，即同步动态随机存取存储器。而DDR&nbsp;SDRAM是Double&nbsp;Data&nbsp;Rate&nbsp;SDRAM的缩写，是双倍速率同步动态随机存储器的意思。DDR内存是在SDRAM内存基础上发展而来的，仍然沿用SDRAM生产体系，因此对于内存厂商而言，只需对制造普通SDRAM的设备稍加改进，即可实现DDR内存的生产，可有效的降低成本。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ü&nbsp;&nbsp;SDRAM在一个时钟周期内只传输一次数据，它是在时钟的上升期进行数据传输；而DDR内存则是一个时钟周期内传输两次数据，它能够在时钟的上升期和下降期各传输一次数据，因此称为双倍速率同步动态随机存储器。DDR内存可以在与SDRAM相同的总线频率下达到更高的数据传输率。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ü&nbsp;&nbsp;与SDRAM相比：DDR运用了更先进的同步电路，使指定地址、数据的输送和输出主要步骤既独立执行，又保持与CPU完全同步；DDR使用了DLL(Delay&nbsp;Locked&nbsp;Loop，延时锁定回路提供一个数据滤波信号)技术，当数据有效时，存储控制器可使用这个数据滤波信号来精确定位数据，每16次输出一次，并重新同步来自不同存储器模块的数据。DDR本质上不需要提高时钟频率就能加倍提高SDRAM的速度，它允许在时钟脉冲的上升沿和下降沿读出数据，因而其速度是标准SDRAM的两倍。从外形体积上DDR与SDRAM相比差别并不大，他们具有同样的尺寸和同样的针脚距离。但DDR为184针脚，比SDRAM多出了16个针脚，主要包含了新的控制、时钟、电源和接地等信号。DDR内存采用的是支持2.5V电压的SSTL2标准，而不是SDRAM使用的3.3V电压的LVTTL标准。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ü&nbsp;&nbsp;DDR2</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ü&nbsp;&nbsp;DDR2/DDR&nbsp;II（Double&nbsp;Data&nbsp;Rate&nbsp;2）SDRAM是由JEDEC（电子设备工程联合委员会）进行开发的新生代内存技术标准，它与上一代DDR内存技术标准最大的不同就是，虽然同是采用了在时钟的上升/下降延同时进行数据传输的基本方式，但DDR2内存却拥有两倍于上一代DDR内存预读取能力（即：4bit数据读预取）。换句话说，DDR2内存每个时钟能够以4倍外部总线的速度读/写数据，并且能够以内部控制总线4倍的速度运行。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ü&nbsp;&nbsp;在同等核心频率下，DDR2的实际工作频率是DDR的两倍。这得益于DDR2内存拥有两倍于标准DDR内存的4BIT预读取能力。换句话说，虽然DDR2和DDR一样，都采用了在时钟的上升延和下降延同时进行数据传输的基本方式，但DDR2拥有两倍于DDR的预读取系统命令数据的能力。也就是说，在同样100MHz的工作频率下，DDR的实际频率为200MHz，而DDR2则可以达到400MHz。DDR2内存采用1.8V电压，相对于DDR标准的2.5V，降低了不少，从而提供了明显的更小的功耗与更小的发热量，这一点的变化是意义重大的。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ü&nbsp;&nbsp;DDR2引入了三项新的技术，它们是OCD、ODT和PostCAS。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ü&nbsp;&nbsp;OCD（Off-ChipDriver）：也就是所谓的离线驱动调整，DDR2通过OCD可以提高信号的完整性。DDR2通过调整上拉（pull-up）/下拉（pull-down）的电阻值使两者电压相等。使用OCD通过减少DQ-DQS的倾斜来提高信号的完整性；通过控制电压来提高信号品质。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ü&nbsp;&nbsp;ODT：ODT是内建核心的终结电阻器。使用DDRSDRAM的主板上面为了防止数据线终端反射信号需要大量的终结电阻。它大大增加了主板的制造成本。实际上，不同的内存模组对终结电路的要求是不一样的，终结电阻的大小决定了数据线的信号比和反射率，终结电阻小则数据线信号反射低但是信噪比也较低；终结电阻高，则数据线的信噪比高，但是信号反射也会增加。因此主板上的终结电阻并不能非常好的匹配内存模组，还会在一定程度上影响信号品质。DDR2可以根据自己的特点内建合适的终结电阻，这样可以保证最佳的信号波形。使用DDR2不但可以降低主板成本，还得到了最佳的信号品质，这是DDR不能比拟的。</SPAN></P><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ü&nbsp;&nbsp;&nbsp;PostCAS：它是为了提高DDR2内存的利用效率而设定的。在PostCAS操作中，CAS信号（读写/命令）能够被插到RAS信号后面的一个时钟周期，CAS命令可以在附加延迟（AdditiveLatency）后面保持有效。原来的tRCD（RAS到CAS和延迟）被AL（AdditiveLatency）所取代，AL可以在0，1，2，3，4中进行设置。由于CAS信号放在了RAS信号后面一个时钟周期，因此ACT和CAS信号永远也不会产生碰撞冲突。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ü&nbsp;&nbsp;DDR3</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ü&nbsp;&nbsp;DDR3提供了相较于DDR2&nbsp;SDRAM更高的运行效能与更低的电压，是DDR2&nbsp;SDRAM（四倍资料率同步动态随机存取内存）的后继者（增加至八倍），也是现时流行的内存产品。DDR3&nbsp;SDRAM为了更省电、传输效率更快，使用了SSTL&nbsp;15的I/O接口，运作I/O电压是1.5V，采用CSP、FBGA封装方式包装，除了延续DDR2&nbsp;SDRAM的ODT、OCD、Posted&nbsp;CAS、AL控制方式外，另外新增了更为精进的CWD、Reset、ZQ、SRT、RASR功能。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ü&nbsp;&nbsp;CWD是作为写入延迟之用，Reset提供了超省电功能的命令，可以让DDR3&nbsp;SDRAM内存颗粒电路停止运作、进入超省电待命模式，ZQ则是一个新增的终端电阻校准功能，新增这个线路脚位提供了ODCE（On&nbsp;Die&nbsp;Calibration&nbsp;Engine）用来校准ODT（On&nbsp;Die&nbsp;Termination）内部中断电阻，新增了SRT（Self-Reflash&nbsp;Temperature）可编程化温度控制内存时脉功能，SRT的加入让内存颗粒在温度、时脉和电源管理上进行优化，可以说在内存内，就做了电源管理的功能，同时让内存颗粒的稳定度也大为提升，确保内存颗粒不致于工作时脉过高导致烧毁的状况，同时DDR3&nbsp;SDRAM还加入RASR（Partial&nbsp;Array&nbsp;Self-Refresh）局部Bank刷新的功能，可以说针对整个内存Bank做更有效的资料读写以达到省电功效。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ü&nbsp;&nbsp;与DDR2比较有以下改变：</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ü&nbsp;&nbsp;1.突发长度（Burst&nbsp;Length，BL）：由于DDR3的预取为8bit，所以突发传输周期（Burst&nbsp;Length，BL）也固定为8，而对于DDR2和早期的DDR架构系统，BL=4也是常用的，DDR3为此增加了一个4bit&nbsp;Burst&nbsp;Chop（突发突变）模式，即由一个BL=4的读取操作加上一个BL=4的写入操作来合成一个BL=8的数据突发传输，届时可通过A12地址线来控制这一突发模式。而且需要指出的是，任何突发中断操作都将在DDR3内存中予以禁止，且不予支持，取而代之的是更灵活的突发传输控制（如4bit顺序突发）。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ü&nbsp;&nbsp;2.寻址时序（Timing）：就像DDR2从DDR转变而来后延迟周期数增加一样，DDR3的CL周期也将比DDR2有所提高。DDR2的CL范围一般在2～5之间，而DDR3则在5～11之间，且附加延迟（AL）的设计也有所变化。DDR2时AL的范围是0～4，而DDR3时AL有三种选项，分别是0、CL-1和CL-2。另外，DDR3还新增加了一个时序参数——写入延迟（CWD），这一参数将根据具体的工作频率而定。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ü&nbsp;&nbsp;3.DDR3新增的重置（Reset）功能：重置是DDR3新增的一项重要功能，并为此专门准备了一个引脚。DRAM业界很早以前就要求增加这一功能，如今终于在DDR3上实现了。这一引脚将使DDR3的初始化处理变得简单。当Reset命令有效时，DDR3内存将停止所有操作，并切换至最少量活动状态，以节约电力。&nbsp;在Reset期间，DDR3内存将关闭内在的大部分功能，所有数据接收与发送器都将关闭，所有内部的程序装置将复位，DLL（延迟锁相环路）与时钟电路将停止工作，而且不理睬数据总线上的任何动静。这样一来，将使DDR3达到最节省电力的目的。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ü&nbsp;&nbsp;4.DDR3新增ZQ校准功能：ZQ也是一个新增的脚，在这个引脚上接有一个240欧姆的低公差参考电阻。这个引脚通过一个命令集，通过片上校准引擎（On-Die&nbsp;Calibration&nbsp;Engine，ODCE）来自动校验数据输出驱动器导通电阻与ODT的终结电阻值。当系统发出这一指令后，将用相应的时钟周期（在加电与初始化之后用512个时钟周期，在退出自刷新操作后用256个时钟周期、在其他情况下用64个时钟周期）对导通电阻和ODT电阻进行重新校准。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ü&nbsp;&nbsp;5.参考电压分成两个：在DDR3系统中，对于内存系统工作非常重要的参考电压信号VREF将分为两个信号，即为命令与地址信号服务的VREFCA和为数据总线服务的VREFDQ，这将有效地提高系统数据总线的信噪等级。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ü&nbsp;&nbsp;6.点对点连接（Point-to-Point，P2P）：这是为了提高系统性能而进行的重要改动，也是DDR3与DDR2的一个关键区别。在DDR3系统中，一个内存控制器只与一个内存通道打交道，而且这个内存通道只能有一个插槽，因此，内存控制器与DDR3内存模组之间是点对点（P2P）的关系（单物理Bank的模组），或者是点对双点（Point-to-two-Point，P22P）的关系（双物理Bank的模组），从而大大地减轻了地址/命令/控制与数据总线的负载。而在内存模组方面，与DDR2的类别相类似，也有标准DIMM（台式PC）、SO-DIMM/Micro-DIMM（笔记本电脑）、FB-DIMM2（服务器）之分，其中第二代FB-DIMM将采用规格更高的AMB2（高级内存缓冲器）。&nbsp;面向64位构架的DDR3显然在频率和速度上拥有更多的优势，此外，由于DDR3所采用的根据温度自动自刷新、局部自刷新等其它一些功能，在功耗方面DDR3也要出色得多，因此，它可能首先受到移动设备的欢迎，就像最先迎接DDR2内存的不是台式机而是服务器一样。在CPU外频提升最迅速的PC台式机领域，DDR3未来也是一片光明。目前Intel所推出的新芯片-熊湖(Bear&nbsp;Lake)，其将支持DDR3规格，而AMD也预计同时在K9平台上支持DDR2及DDR3两种规格。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ü&nbsp;&nbsp;现在我们内存主要归属于DDR2（Double&nbsp;Data&nbsp;Rate&nbsp;SDRAM&nbsp;2）。DDR2内存技术最大的突破点其实不在于用户们所认为的两倍于DDR的传输能力，而是在采用更低发热量、更低功耗的情况下，DDR2可以获得更快的频率提升，突破标准DDR的400MHZ限制。DDR内存通常采用TSOP芯片封装形式，这种封装形式可以很好的工作在200MHz上，当频率更高时，它过长的管脚就会产生很高的阻抗和寄生电容，这会影响它的稳定性和频率提升的难度。这也就是DDR的核心频率很难突破275MHZ的原因。而DDR2内存均采用FBGA封装形式。不同于目前广泛应用的TSOP封装形式，FBGA封装提供了更好的电气性能与散热性，为DDR2内存的稳定工作与未来频率的发展提供了良好的保障。现在DDR3也在推广中，DDR4在研发中，未来可能会大规模使用。</SPAN></P><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">寄存器&nbsp;vs&nbsp;无缓存&nbsp;内存</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Xeon&reg;&nbsp;5500&nbsp;支持&nbsp;3种&nbsp;DIMM&nbsp;:</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">寄存器的&nbsp;DIMMs&nbsp;(RDIMM)</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">无缓存&nbsp;ECC&nbsp;DIMMs&nbsp;(UDIMM&nbsp;ECC)</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">无缓存&nbsp;DIMMs&nbsp;(UDIMM)</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">UDIMM&nbsp;和&nbsp;RDIMM&nbsp;比较:</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">RAS:&nbsp;&nbsp;UDIMM&nbsp;ECC&nbsp;支持所有的&nbsp;RAS</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">功能</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">除了&nbsp;RDIMM&nbsp;所支持的x4&nbsp;SDDC</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">耗电:&nbsp;&nbsp;UDIMM比&nbsp;RDIMMs少消耗&nbsp;~0.75W</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">容量:</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">通常&nbsp;高容量需要RDIMMs&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">支持&nbsp;3&nbsp;DIMMs/通道</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">大部分主流服务器需要支持12GB&nbsp;或更少,所以&nbsp;UDIMM&nbsp;ECC&nbsp;是足够的,&nbsp;并且低功耗</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">四．其他种类内存</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">RDRAM&nbsp;–&nbsp;Rambus&nbsp;DRAM&nbsp;。美国的RAMBUS公司开发的一种内存。与DDR和SDRAM不同，它采用了串行的数据传输模式，彻底改变了内存的传输模式；RDRAM的数据存储位宽是16位，远低于DDR和SDRAM的64位。但在频率方面则远远高于二者，可以达到400MHz乃至更高。同样也是在一个时钟周期内传输两次次数据，能够在时钟的上升期和下降期各传输一次数据，内存带宽能达到1.6Gbyte/s。&nbsp;普通的DRAM行缓冲器的信息在写回存储器后便不再保留，而RDRAM则具有继续保持这一信息的特性，于是在进行存储器访问时，如行缓冲器中已经有目标数据，则可利用，因而实现了高速访问。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">DRDRAM&nbsp;–&nbsp;Direct&nbsp;Rambus&nbsp;DRAM。下一代的主流内存标准之一，由Rambus&nbsp;公司所设计发展出来，是将所有的接脚都连结到一个共同的Bus，这样不但可以减少控制器的体积，已可以增加资料传送的效率。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">FPM&nbsp;DRAM&nbsp;-&nbsp;Fast&nbsp;Page&nbsp;Mode&nbsp;DRAM，快速页切换模式动态随机存取存储器。改良版DRAM，大多数为72Pin或30Pin。传统DRAM在存取一个Bit的数据时，必须送出行地址和列地址各一次才能读写数据。而FRM&nbsp;DRAM在触发了行地址后，如果CPU需要的地址在同一行内，则可以连续输出列地址而不必再输出行地址了。由于一般的程序和数据在内存中排列的地址是连续的，这种情况下输出行地址后连续输出列地址就可以得到所需要的数据。FPM将记忆体内部隔成许多页数Pages，从512B到数KB不等，在读取一连续区域内的数据时，就可以通过快速页切换模式来直接读取各page内的资料，从而大大提高读取速度。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">EDO&nbsp;DRAM&nbsp;-&nbsp;Extended&nbsp;Data&nbsp;Out&nbsp;DRAM。延伸数据输出动态随机存取存储器。继FPM之后出现的一种存储器，一般为72Pin、168Pin。FPM&nbsp;DRAM是在上一次的数据读取完毕才会进行下一个数据的读取，但是对于EDO&nbsp;DRAM却是完全不一样的。&nbsp;EDO&nbsp;DRAM可以在输出数据的同时进行下一个列地址选通。因此它可以大大缩短等待输出地址的时间，其存取速度一般比FPM模式快15%左右</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">VRAM&nbsp;-&nbsp;Video&nbsp;RAM，视频内存。将显卡的视频数据输出到数模转换器中，有效降低绘图显示芯片的工作负担。它采用双数据口设计，其中一个数据口是并行式的数据输出入口，另一个是串行式的数据输出口。多用于高级显卡中的高档内存。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">BEDO&nbsp;DRAM&nbsp;-&nbsp;Burst&nbsp;Extended&nbsp;Data&nbsp;Out&nbsp;DRAM，爆发式延伸数据输出动态随机存取存储器。改良型的EDO&nbsp;DRAM，芯片上增加了一个地址计数器来追踪下一个地址。它是突发式的读取方式，也就是当一个数据地址被送出后，剩下的三个数据每一个都只需要一个周期就能读取，因此一次可以存取多组数据，速度比EDO&nbsp;DRAM快。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">MDRAM&nbsp;-&nbsp;Multi-Bank&nbsp;DRAM，多插槽动态随机存取存储器。内部分成数个类别不同的Bank，也即由数个属立的小单位矩阵所构成，每个储存库之间以高于外部的资料速度相互连接，一般应用于高速显示卡或加速卡中，也有少数主机板用于L2高速缓存中。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">WRAM&nbsp;-&nbsp;Window&nbsp;RAM，窗口随机存取存储器。&nbsp;改良版VRAM，控制线路有10-20组的输入/输出控制器，并采用EDO的资料存取模式，速度相对较快，另外还提供了区块搬移功能（BitBlt），应用于专业绘图工作。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">SGRAM&nbsp;-&nbsp;Synchronous&nbsp;Graphics&nbsp;RAM，同步绘图随机存取存储器。改良版SDRAM，它以Block（即每32bit）为基本存取单位，个别地取回或修改存取的资料，减少内存整体读写的次数，另外还针对绘图需要而增加了绘图控制器，并提供区块搬移功能（BitBlt）。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">SB&nbsp;SRAM&nbsp;-&nbsp;Synchronous&nbsp;Burst&nbsp;SRAM，同步爆发式静态随机存取存储器。一般的SRAM是非同步的，为了适应CPU越来越快的速度，需要使它的工作时脉变得与系统同步，这就是SB&nbsp;SRAM产生的原因。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">PB&nbsp;SRAM&nbsp;-&nbsp;Pipeline&nbsp;Burst&nbsp;SRAM，管线爆发式静态随机存取存储器。CPU外频速度的迅猛提升对与其相搭配的内存提出了更高的要求，PB&nbsp;SRAM取代SB&nbsp;SRAM成为必然的选择，因为它可以有效地延长存取时脉，从而有效提高访问速度。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">SLDRAM&nbsp;-&nbsp;Synchronize&nbsp;Link，同步链环动态随机存取存储器。扩展型SDRAM结构内存，增加了更先进同步电路，改进了逻辑控制电路。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">CDRAM&nbsp;-&nbsp;CACHED&nbsp;DRAM，同步缓存动态随机存取存储器。在DRAM芯片的外部插针和内部DRAM之间插入一个SRAM作为二级CACHE使用。当前，几乎所有的CPU都装有一级CACHE来提高效率，随着CPU时钟频率的成倍提高，CACHE不被选中对系统性能产生的影响将会越来越大，而CACHE&nbsp;DRAM所提供的二级CACHE正好用以补充CPU一级CACHE之不足，因此能极大地提高CPU效率。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">五.&nbsp;内存条</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">电脑、服务器等中的内存条为RAM。按内存条的接口形式，常见内存条有两种：单列直插内存条（SIMM），和双列直插内存条（DIMM）。SIMM内存条分为30线，72线两种。DIMM内存条与SIMM内存条相比引脚增加到168线。DIMM可单条使用，不同容量可混合使用，SIMM必须成对使用。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">每根内存条上都有一个SPD芯片，SPD（Serial&nbsp;Presence&nbsp;Detect，串行存在检测）是一颗8针的EEPROM（Electrically&nbsp;Erasable&nbsp;Programmable&nbsp;ROM，电可擦写可编程只读存储器）芯片，一般容量为256字节（Byte）。SPD芯片内记录了该内存的许多重要信息，诸如内存的芯片及模组厂商、工作频率、工作电压、速度、容量、电压与行、列地址带宽等参数。SPD信息一般都是在出厂前，由内存模组制造商根据内存芯片的实际性能写入到ROM芯片中。&nbsp;&nbsp;启动计算机后，uEFI就会读取SPD中的信息，Chipset就会根据这些参数信息来自动配置相应的内存工作时序与控制寄存器，从而可以充分发挥内存条的性能。</SPAN></P><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">六.&nbsp;服务器内存类型(UDIMM、RDIMM和LRDIMM)</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">随着内存技术不断发展，服务器上内存的容量、密度和速度也越来越高。目前在市场上出现的内存条最高密度可以做到每条内存条4个Rank，容量达到&nbsp;32GB/条，最高速度达到1.6GHz。当然，高密度高频率也意味着较高的价格，也可能会带来更高的功耗。那么到底应该怎么根据实际的需要来选择内存条&nbsp;呢？下面让我们来看看：</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">目前服务器的内存总线技术基本上没有再大的变化，依旧使用DDR3技术。DDR3是并行传输技术，因此要保证并行数据传输的有效性，就必须在内存条上下功夫。目前内存条的种类有三种：UDIMM,&nbsp;RDIMM,&nbsp;LRDIMM。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">UDIMM：也称为Unbuffered&nbsp;DIMM。当数据从CPU传到每个内存颗粒时，UDIMM要求保证CPU到每个内存颗粒之间的数据传输距离相等，这样并行传输才会有效。这需要极高的制造工艺，极难做到高密度、高频率。因此UDIMM容量和频率都较低。不过，UDIMM由于在CPU和内存之间没有任何缓存，因此同频率下时延较小。目前常见的是单条容量2GB/4GB，最高主频也只能到达1.33GHz。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">RDIMM：也称为Registered&nbsp;DIMM。为了保证并行传输的有效性，RDIMM在内存条上加了一个寄存器进行转发。它位于CPU和内存颗粒之间，这样就减少了并行传输的距离。同时由于寄存器效率很高，因此RDIMM的密度和频率就容易提高。RDIMM目前是较为主流的内存条，单条容量在2～32GB之间，频率也有1.33GHz和1.6GHz两种选择。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">LRDIMM：也称为Load&nbsp;Reduced&nbsp;DIMM。RDIMM虽然能提高传输有效性，但由于寄存器大小有限，当单条内存中内存颗粒以最高密度4Rank部署时，并行传输有效性和频率就会大大下降，服务器在每条内存通道只能最多支持2条内存且只能运行在800MHz。所以在第12代服务器中引入了新一代内存技术，LRDIMM。它在内存条上加了一个缓存(Buffer)。LRDIMM能够保证即使在单条内存32GB容量甚至更高的情况下，服务器上每个内存通道依然能够布满至3条内存条。不过加入缓存也意味着时延进一步增大，功耗提高。LRDIMM目前常见的是单条容量32GB，主频1.33GHz。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">七．内存访问优化策略</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">假设一个SDRAM有四个Bank，每个Bank各有一个Row&nbsp;Buffer。Activate指令会将一行数据放入相应Bank的Row&nbsp;Buffer中，而Precharge、Precharge&nbsp;All指令会关闭Row&nbsp;Buffer并写回数据。如果某Bank的Row&nbsp;Buffer是关闭的，我们称它为空闲&nbsp;(Idle)&nbsp;的。SDRAM的访问存在三种情况：</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Page&nbsp;Hit。当前访问的Row，正好保存在相应bank的row&nbsp;buffer里。此时，不需要激活Row，直接发读写指令和Column地址，就可以进行列读写，这就是Back&nbsp;to&nbsp;Back读写。此情况，读写延时最小。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Page&nbsp;Empty。当前访问的Row所在的bank中，row&nbsp;buffer关闭。此时，需要先激活Row，再发读写指令和Column地址。此情况，读写延时中等。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Page&nbsp;Miss。当前访问的Row所在的bank中，row&nbsp;buffer打开，但存的是另一个Row的数据。此时，必须先发送Precharge或Precharge&nbsp;All指令关闭row&nbsp;buffer，再激活Row，最后发读写指令和Column地址。此情况，读写延时最大。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Close&nbsp;Page&nbsp;Policy</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;尽量保持行缓冲关闭的策略。对当前行访问结束后立刻进行Precharge操作，不论后面是否还要访问该行。Close&nbsp;Page&nbsp;Policy中只发生一种情况：Page&nbsp;Empty(即行缓冲为空，需要先激活行)。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Close&nbsp;Page&nbsp;Policy的读写延时适中并且恒定，与访问请求的时间空间局部性无关，具有良好的可预测性&nbsp;(Predictabilility)&nbsp;，适用于实时性要求较高的应用场合。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Close&nbsp;Page&nbsp;Policy的硬件实现比较简洁，因为每次读写都是一个行激活、列读写、预充电的过程。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;Open&nbsp;Page&nbsp;Policy</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">尽量保持行缓冲打开的策略。除非需要访问当前同一bank中的其它行，则不进行Precharge操作。Open&nbsp;Page&nbsp;Policy中常会发生两种情况：Page&nbsp;Hit(即再次访问Row&nbsp;Buffer中的数据)、Page&nbsp;Miss&nbsp;(Row&nbsp;Buffer中的行不是要访问的行)。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">如果访问请求的时间空间局部性很好，则发生Page&nbsp;Hit的概率远大于发生Page&nbsp;Miss的概率，应用Open&nbsp;Page&nbsp;Policy可以大大减少读写延时；如果访问请求的时间空间分部很分散，则发生Page&nbsp;Miss的概率远大于发生Page&nbsp;Hit，应用Open&nbsp;Page&nbsp;Policy会造成较大的读写延时。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;Adaptive&nbsp;Page&nbsp;Policy</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">动态的行缓冲策略。根据运行中前一段时间的访问历史动态决定SDRAM行缓冲策略的技术；</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">若当前策略偏向于Open&nbsp;Page，则对下列情况进行双向计数：关闭当前行以打开新行、访问当前行，如果前者接二连三地出现并超过阈值，则更换策略；</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">若当前策略偏向于Close&nbsp;Page，则对下列情况进行双向计数：打开新行、打开上一次操作中被关闭的行，如果后者接二连三地出现并超过阈值，则更换策略。</SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN>&nbsp;</P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">八．内存错误</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">按错误来源分，内存错误分为硬错误和软错误：</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Hard&nbsp;Error：硬错误，指受到外界环境中强大的能量如雷击或静电的瞬间放电而造成的系统元件永久性损坏，可以通过硬件故障切换(failover)功能来恢复，保证系统的持续运行。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Soft&nbsp;Error：软错误，指半导体元件受不明带电粒子影响，如果正好撞击到内存中的储存单元，只要能量足够就会导致位元翻转，造成数据错误。软错误是随机的，对于可纠正的软错误，可以通过ECC等内存保护技术来修复。对于不可纠正的错误，可以通过联合OS/firmware进行的错误隔离以及错误恢复。当软错误（可修复/不可修复）累积到一定数量，可通过阈值(Threshold)和PFA算法来提前通知用户进行硬件更换，而不致错误累积到系统突然宕机&nbsp;。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">按错误类型分，内存错误可分为可纠正错误和不可纠正错误：</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Correctable&nbsp;Error：可纠正错误，指可利用CRC、ECC等硬件机制来纠正的错误。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Uncorrectable&nbsp;Error：不可纠正错误，指无法利用ECC等硬件机制来纠正的错误，需要通过备、镜像和热切换等将损坏的数据进行隔离。有些不可纠正的错误可能造成系统宕机。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">另外，内存错误还可分为单比特错误（SBE&nbsp;-&nbsp;Single&nbsp;Bit&nbsp;Error），多比特错误（DBE&nbsp;–&nbsp;Double&nbsp;Bit&nbsp;Error）和地址奇偶检验错误（AP&nbsp;-&nbsp;Address&nbsp;Parity）。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">九．内存RAS</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">RAS&nbsp;-&nbsp;Reliability,&nbsp;Availability&nbsp;and&nbsp;Serviceability</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Reliability:&nbsp;可靠性。指的是系统必须尽可能的可靠，不会意外的崩溃，重启甚至导致系统物理损坏，这意味着一个具有可靠性的系统必须能够对于某些小的错误能够做到自修复，对于无法自修复的错误也尽可能进行隔离，保障系统其余部分正常运转。&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Availability：可用性。指的是系统必须能够确保尽可能长时间工作而不下线，即使系统出现一些小的问题也不会影响整个系统的正常运行，在某些情况下甚至可以进行&nbsp;Hot&nbsp;Plug&nbsp;的操作，替换有问题的组件，从而严格的确保系统的&nbsp;downtime&nbsp;时间在一定范围内。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Serviceability：指的是系统能够提供便利的诊断功能，如系统日志，动态检测等手段方便管理人员进行系统诊断和维护操作，从而及早的发现错误并且修复错误。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">RAS&nbsp;作为一个整体，其作用在于确保整个系统尽可能长期可靠的运行而不下线，并且具备足够强大的容错机制。这对于像大型的数据中心，网络中心如股票证券交易所，电信机房，银行的数据库中心等应用环境是不可或缺的一部分。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ECC内存技术</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ECC&nbsp;(Error&nbsp;Detection&nbsp;Code)&nbsp;-&nbsp;错误检查和纠正。在数据位上额外的位存储一个用数据加密的代码，称为ECC码。ECC码将信息进行8比特位的编码，采用这种方式可以恢复1比特的错误。每一次数据写入内存的时候，ECC码使用一种特殊的算法对数据进行计算，其结果称为校验位（check&nbsp;bits）。然后将所有校验位加在一起的和是“校验和”（checksum），校验和与数据一起存放。当这些数据从内存中读出时，采用同一算法再次计算校验和，并和前面的计算结果相比较，如果结果相同，说明数据是正确的，反之说明有错误，ECC码则会被解码，以确定数据中的那一位是不正确的。然后这一错误位会被改正过来不影响系统运行。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ChipKill技术</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ECC内存技术虽然可以同时检测和纠正单一比特错误，但如果同时检测出两个以上bits数据有错误，则无能为力。IBM的Chipkill&nbsp;技术是利用内存的子结构方法来解决这一难题，弥补ECC的不足。Chipkill内存控制器所提供的存储保护在概念上和具有校验功能的磁盘阵列类似：在写数据的时候，把数据写到多个DIMM内存芯片上。这样，每个DIMM所起的作用和存储阵列相同。如果其中任何一个芯片失效了，它只影响到一个数据字节的某一比&nbsp;特，因为其他比特存储在另外的芯片上。出现错误后，内存控制器能够从失效的芯片重新构造“失去”的数据，使得服务器可以继续正常工作。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Memory&nbsp;ProteXion&nbsp;/&nbsp;RBS</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Memory&nbsp;ProteXion（内存保护，也称“冗余位迁移(RBS)”）是IBM的一项内存纠错技术，最初是为IBM大型机所开发的。它相对前面介绍的Chipkill内存技术在保护能力上更强些。它的工作方式与Windows&nbsp;NTFS&nbsp;文件系统中热备用磁盘扇区有些类似，如果操作系统检测到磁盘上有坏扇区，它将把数据写到备用扇区以实现这一目的。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">SDDC&nbsp;和DDDC</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">英特尔提供了与ChipKill类似的功能，叫做单设备数据校正(Intel&nbsp;x4&nbsp;/&nbsp;x8&nbsp;SDDC)&nbsp;。可修正单个DRAM设备上的多比特位错误，将单个&nbsp;DRAM&nbsp;从内存映射中删除，并将&nbsp;DRAM&nbsp;数据恢复至新设备，以快速修复整个&nbsp;DRAM&nbsp;设备的故障。在出错的DRAM从内存映射中被删除后，还可以继续进行单比特位数据校正。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">DDDC是双设备数据校正。允许纠正双位硬件内存错误。确保当一个DIMM上的二个DRAM芯片发生多比特位错误时也能修复产生的错误，将出错的DRAM从内存映射中删除，并将修复好的数据恢复至新设备。&nbsp;在出错的DRAM从内存映射中被删除后，还可以继续进行单比特位数据校正。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Memory&nbsp;Scrubbing</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">ECC只有在写入数据时才会产生，并且只有当从内存读取数据的时候，ECC模块才会去读取ECC校验码，并对照相同与否来发现出现的错误。但是，错误可能发生在还没有被访问到的内存位置，如果这种错误累积，就会导致无法修复的多比特位错误，进而导致数据损坏甚至系统崩溃。内存检查（Memory&nbsp;Scrubbing）是Intel的内存检查技术，引入一个嵌入式硬件引擎，不断地监测并修复出现的内存错误，从而可确保不会造成错误积累到不可修复的程度。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Memory&nbsp;Mirroring&nbsp;内存镜像</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">内存镜像(Memory&nbsp;Mirroring)&nbsp;采用两组DIMM互为镜像的方式形成一种备份机制，工作原理与RAID1硬盘类似，内存镜像是将内存数据做两个拷贝，分别放在主内存和镜像内存中。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">正常工作情况下，内存数据读取只从活动内存卡中进行。只是当活动内存出现故障，内存保护和Chipkill修复技术都不能完全修复，才会从镜像内存中读取数据。如果一个内存中有足以引起系统报警的故障，系统会报告系统管理员；同时服务器就会自动地切换到使用镜像内存卡，直到这个有故障的内存被更换。镜像内存允许进行热交换（Hot&nbsp;swap）和在线添加（Hot-add）内存。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">因为镜像内存采用的的两套内存中实际只有一套在使用，另一套用于备份，所以对于软件系统来说也就只有整个内存的一半容量是可用的。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Memory&nbsp;Sparing&nbsp;内存备用</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">内存备用(Memory&nbsp;Sparing)&nbsp;可以实现以DIMM为单位或是以Rank为单位的内存备用。当一个Rank或是DIMM将要失效（错误超过阈值）时，就会启动备用的Rank或DIMM，同时对出错的和备用的Rank或DIMM写入数据，当所有数据全部转移至备用Rank或DIMM后，将出错的Rank或DIMM关闭，切换至备用的Rank或是DIMM上，以避免系统的停机。内存备用(Memory&nbsp;Sparing)不能与内存镜像(Memory&nbsp;Mirroring)同时使用。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">LockStep技术</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">内存通道的访问可分为独立通道模式（Independent&nbsp;Channel&nbsp;Mode）和精确同步模式（LockStep&nbsp;Channel&nbsp;Mode）。独立通道模式是指每个通道（Channel）独立运行，一个内存通道对应CPU的一个高速缓存行（Cache-line）。而LockStep技术使用相同的、冗余的硬件组件在同一时间内处理相同的指令，从而实现一个CPU高速缓存行（Cache-line）上的数据被分布到几个内存通道上。LockStep技术可以保持多个CPU、内存精确的同步，在正确的相同时钟周期内执行相同的指令。该技术保证能够发现任何错误，即使短暂的错误，系统也能在不间断处理和不损失数据的情况下恢复正常运行。LockStep也称锁步，或高级ECC。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Memory&nbsp;Interleaving&nbsp;交叉存取技术</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Memory&nbsp;Interleaving交叉存取技术是加快内存速度的一种技术&nbsp;。&nbsp;在典型的服务器系统中，大量连续的内存访问可能是性能瓶颈，因为内存访问时延会带来等待时间。&nbsp;交叉存取技术是一种并行操作的内存存取，内存被分为一系列的簇，有多少个簇就叫做几路交叉存取。它的原理类似于RAID0技术。在交叉存取方式中，相邻位置的内存数据是被分在不同的块中，只要读写操作是要在两个块中进行的，它们就可以同时进行，从而有效地提高系统性能&nbsp;。</SPAN></P><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Memory&nbsp;Hemisphere&nbsp;Mode</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Hemisphere模式是一种高性能的交错模式。CPU内两个内存控制器之间的内存交错存取，处理器的Caching&nbsp;Agent&nbsp;1不会访问其Home&nbsp;Agent&nbsp;2，从而达到降低内存延迟(Latency)，提高内存呑吐量，提高性能的目的。Hemisphere模式要求两个内存控制器之间的内存配置在DIMM规格和DRAM大小上完全一致。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">UMA和NUMA</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">一致存储器访问（UMA）结构体系有时也被称为SMP(Symmetric&nbsp;Multi-Processor&nbsp;)模式。SMP模式将多个处理器与一个集中的存储器和I/O总线相连。所有处理器只能访问同一个物理存储器。一致性意指无论在什么时候，处理器只能为内存的每个数据保持或共享唯一一个数值。SMP的缺点是可伸缩性有限，因为在存储器和I/O接口达到饱和的时候，增加处理器并不能获得更高的性能。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">NUMA（non-uniform&nbsp;memory&nbsp;access）是一种分布式存储器访问方式，处理器可以同时访问不同的存储器地址，大幅度提高并行性。&nbsp;NUMA模式的基本特征是具有多个CPU模块，每个CPU模块由多个CPU组成，并且具有独立的本地内存、I/O槽口等。由于其节点之间可以通过互联模块(如称为Crossbar&nbsp;Switch)进行连接和信息交互，因此每个CPU可以访问整个系统的内存(这是NUMA系统与MPP系统的重要差别)。访问本地内存的速度将远远高于访问远地内存(系统内其它节点的内存)的速度，这也是非一致存储访问NUMA的由来。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">预测故障分析</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Predictive&nbsp;Failure&nbsp;Analysis预测故障分析。其关键任务目标是最小化非计划宕机时间。PFA(预测故障分析)会监控系统自身健康情况，并在失效实际发生前产生告警的能力。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Machine&nbsp;Check&nbsp;Architecture</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Intel&nbsp;RAS集中解决三个方面的问题：一是数据保护，利用CRC、ECC等硬件机制来对传输的数据进行校验、纠错，如果无法纠正，就将损坏的数据进行隔离，以保证不造成更大的数据，避免系统的重启和宕机。二是高可用性，包括各种主要部件的备、镜像和热切换等，以保证系统的高可用性。三是计划宕机时间最小化，包括系统分区管理技术、CPU和内存的热添加和热移除等，将系统维护时间降低到最小。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">除此之外，Intel建立了一个CMCI架构，以保证纯硬件的数据纠错，在硬件层保障信号传输的正确性。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">当发生硬件无法完全纠正的错误的时候，Intel&nbsp;进而提供了一系列需要联合OS/firmware进行的错误隔离以及错误恢复。对无法纠正的数据，使用一个Poison（毒药）标记，OS/firmware可以知道这些数据在硬件层次上无法恢复，从而可以决定进行Retry或者丢弃。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">这些特性形成了一个完整的MCA架构（Machine&nbsp;Check&nbsp;Architecture）。MCA功能可以在不关机的情况下检查和纠正处理器、内存或者IO中的错误，在OS配合的情况可以对系统进行热维护，保障系统的不间断运行。微软Windows&nbsp;Server、RedHat、SUSELinux以及VMware等平台都已经支持这一功能。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">十．服务器内存的选型</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">从价格的角度看，RDIMM比较适中。小容量的UDIMM较为便宜，但是由于制造工艺要求高，大容量的UDIMM价格甚至超过RDIMM。LRDIMM价格高于RDIMM与UDIMM。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">从容量的角度看，只有LRDIMM能够支持到最大化的总内存容量。不过主要应用所需要的内存容量一般通过部署RDIMM就可以达到。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">从主频的角度看，目前只有RDIMM支持1.6GHz，可以拥有更大带宽和小时延。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">从时延的角度看，虽然同频率下UDIMM时延最小，但是RDIMM可以支持1.6GHz，用更高的频率来降低时延。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">从功耗的角度看，LRDIMM最高，RDIMM和UDIMM较低</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">结论：如果需要最大的内存容量，就必须使用LRDIMM；如果不需要最大的内存容量，使用RDIMM（1.6GHz）性能、价格和可扩展性较好；如果考虑功耗，可以使用低电压DDR3L内存，并控制其运行在较低频率下。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">以下是服务器在使用不同类型内存时，每个通道能够支持的最大内存数量、运行电压和最高运行频率表：</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal>
+<TABLE 
+style="WIDTH: 414.75pt; BORDER-COLLAPSE: collapse; MARGIN-LEFT: -2.1pt; mso-padding-alt: 0.0000pt 0.0000pt 0.0000pt 0.0000pt">
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-TOP: windowtext 0.75pt outset; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 54.75pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: windowtext 0.75pt outset; PADDING-RIGHT: 0pt; mso-border-left-alt: 0.7500pt outset windowtext; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top rowSpan=2 width=73>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">类型</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: windowtext 0.75pt outset; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 49.5pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top rowSpan=2 width=66>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Rank数量</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: windowtext 0.75pt outset; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 67.5pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top rowSpan=2 width=90>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">内存大小</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: windowtext 0.75pt outset; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 58.5pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top rowSpan=2 width=78>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">内存频率</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: windowtext 0.75pt outset; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 184.5pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=246 colSpan=3>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">单通道可部署数量、电压与运行频率</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 63pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=84>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">1条内存</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: windowtext 0.75pt outset; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 63pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=84>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">2条内存</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: windowtext 0.75pt outset; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 58.5pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=78>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">3条内存</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 54.75pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: windowtext 0.75pt outset; PADDING-RIGHT: 0pt; mso-border-left-alt: 0.7500pt outset windowtext; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=73>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">RDIMM</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 49.5pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=66>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">1/2&nbsp;Rank</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 67.5pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=90>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">2/4/8/16GB</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 58.5pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=78>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">1600/1333</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 63pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=84>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">1.5V,&nbsp;1600</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 63pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=84>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">1.5V,&nbsp;1600</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 58.5pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=78>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">1.5V,&nbsp;1600</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 54.75pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: windowtext 0.75pt outset; PADDING-RIGHT: 0pt; mso-border-left-alt: 0.7500pt outset windowtext; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=73>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">UDIMM</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 49.5pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=66>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">1/2&nbsp;Rank</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 67.5pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=90>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">2/4GB</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 58.5pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=78>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">1333</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 63pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=84>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">1.5V,&nbsp;1333</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 63pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=84>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">1.5V,&nbsp;1333</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 58.5pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=78>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">不支持</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 54.75pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: windowtext 0.75pt outset; PADDING-RIGHT: 0pt; mso-border-left-alt: 0.7500pt outset windowtext; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=73>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">RDIMM</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 49.5pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=66>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">4&nbsp;Rank</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 67.5pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=90>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">8/16/32GB</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 58.5pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=78>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">1066/1333</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 63pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=84>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">1.5V,&nbsp;1066</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 63pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=84>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">1.35V,&nbsp;800</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 58.5pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=78>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">不支持</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 54.75pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: windowtext 0.75pt outset; PADDING-RIGHT: 0pt; mso-border-left-alt: 0.7500pt outset windowtext; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=73>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">LRDIMM</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 49.5pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=66>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">4&nbsp;Rank</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 67.5pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=90>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">8/16/32GB</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 58.5pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=78>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">1333</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 63pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=84>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">1.35V,&nbsp;1333</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 63pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=84>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">1.35V,&nbsp;1333</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 0.75pt outset; WIDTH: 58.5pt; BORDER-BOTTOM: windowtext 0.75pt outset; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt; mso-border-left-alt: none; mso-border-right-alt: 0.7500pt outset windowtext; mso-border-top-alt: 0.7500pt outset windowtext; mso-border-bottom-alt: 0.7500pt outset windowtext" 
+    vAlign=top width=78>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">1.35V,&nbsp;1066</SPAN><SPAN 
+      style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P></TD></TR></TBODY></TABLE></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">十一.&nbsp;&nbsp;System&nbsp;x&nbsp;高级内存特征</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">热插拔内存</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">在线更换和添加内存</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">内存镜像</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">内存条完全冗余，提供故障恢复保护</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">内存&nbsp;ProteXion&nbsp;（位冗余）</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Chipkill&nbsp;内存，同样利用工业级&nbsp;DIMM&nbsp;内的“热备份”位置</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">在线备用</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">发生单个&nbsp;DIMM&nbsp;故障时，使用备用&nbsp;DIMM</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Chipkill&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">立即检测并纠正多达&nbsp;8&nbsp;个内存错误。在控制器中实现，以确保安装工业级&nbsp;DIMM&nbsp;的能力</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">错误检测与纠错&nbsp;（ECC）&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">检测并纠正所有单位错误以及许多双位错误。出现越限时，通常会产生一个系统&nbsp;PFA&nbsp;告警。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">内存ProteXion</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">位冗余与&nbsp;DASD&nbsp;阵列的热备份相似</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">利用每个内存&nbsp;DIMM&nbsp;中未使用的位（热备用比特）</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">能够在&nbsp;DIMM&nbsp;发生故障时利用这些备用比特</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">内存擦洗（Memory&nbsp;scrubbing）</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">所有系统内存的自动日常测试</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">在造成服务器中断之前，发现并上报内存错误</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">如果安装了&nbsp;64&nbsp;GB&nbsp;内存，每天至少进行一次</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">如果错误：</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">–&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;可恢复&nbsp;-&nbsp;激活内存&nbsp;ProteXion&nbsp;功能，将数据重写到新的位置</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">–&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;不可恢复&nbsp;-&nbsp;向光通路诊断系统发送错误消息</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">活动内存</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">热插拔</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">–&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在服务器运行时，用相同类型、尺寸与时钟速度的&nbsp;DIMM&nbsp;更换故障&nbsp;DIMM，&nbsp;&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">–&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;独立于操作系统</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">–&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;必须激活内存镜像功能</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">热添加</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">–&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在服务器运行时，添加新的&nbsp;DIMM</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">–&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;依操作系统而定</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">–&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;必须关闭内存镜像功能</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Chipkill&nbsp;内存</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">Chipkill&nbsp;是&nbsp;System&nbsp;x&nbsp;内存子系统采用的一项技术，它大大提高了内存的可靠性，最早开发用于美国国家航空航天局“火星探路者号”任务，与内存子系统集成，无需特别的&nbsp;DIMM。</SPAN></P><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">比&nbsp;ECC&nbsp;技术的效率高出&nbsp;100&nbsp;倍以上：</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">无论在单芯片或多芯片上，通过将校验和值写入内存子系统的另外一部分，就能为每个&nbsp;DIMM&nbsp;纠正&nbsp;4&nbsp;比特的错误；</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">允许服务器探测并纠正多达&nbsp;4&nbsp;比特的错误；</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">服务器运行时，能自动让未运行的内存下线。</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">参考资料</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">1.</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/1365.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">http://baike.baidu.com/view/1365.htm</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">2.</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/3558.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">http://baike.baidu.com/view/3558.htm</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">3.</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/1082.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">http://baike.baidu.com/view/1082.htm</SPAN></A></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt">4.</SPAN><SPAN><A 
+href="http://baike.baidu.com/view/1082.htm"><SPAN class=15 
+style="FONT-SIZE: 9pt; TEXT-DECORATION: underline; FONT-FAMILY: 微软雅黑; COLOR: rgb(0,0,255); mso-spacerun: 'yes'; text-underline: single">http://baike.baidu.com/view/1082.htm</SPAN></A></SPAN></P><!--EndFragment--></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN><!--EndFragment--></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN><!--EndFragment--><!--EndFragment--></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN><!--EndFragment--></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN><!--EndFragment--></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 微软雅黑; mso-spacerun: 'yes'; mso-font-kerning: 1.0000pt"><o:p></o:p></SPAN><!--EndFragment--><!--EndFragment--></SPAN>
+<P class=MsoNormal><SPAN></SPAN>&nbsp;</P>
+<P><!--EndFragment-->
+<HR>
+
+<P></P></DIV>
+<DIV class=footer>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright &copy;2015 <A href="" target=_blank></A>. 
+All Rights Reserved. </P></DIV></BODY></HTML>
